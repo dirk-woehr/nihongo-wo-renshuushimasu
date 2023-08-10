@@ -1,0 +1,6 @@
+.mainButton {
+  background-color: var(--color-main-button);
+  border-radius: var(--padding-small);
+  font-size: var(--text-size-button);
+  padding: var(--padding-small) calc(2 * var(--padding));
+}

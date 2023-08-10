@@ -1,0 +1,30 @@
+.editContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+
+.listRow:hover {
+  background-color: darkslategray;
+}
+
+.listRow.active {
+  background-color: darkslateblue;
+}
+
+.listRow > td,
+.listRowHead > th {
+  padding: 3px var(--padding);
+}
+
+.listRowHead {
+  background-color: darkred;
+}
+
+.editTableHead {
+  white-space: nowrap;
+}
+
+table {
+  border-collapse: collapse;
+}
