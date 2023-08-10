@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import styles from "./select-training.module.css";
 import MainButton from "../main-button/main-button.vue";
-import Training from "../training/training.vue";
+import VerbFormTraining from "../verb-form-training/verb-form-training.vue";
 import { GameTypes, gameTypes } from "../../domain/gameTypes";
 import { ref } from "vue";
 
@@ -23,10 +23,10 @@ const setGameType = (newGameType: GameTypes | null) => {
       />
     </div>
   </div>
-  <Training
+  <VerbFormTraining
     v-if="gameType !== null"
     :gameType="gameType"
-    :rounds="10"
+    :rounds="3"
     @trainingFinished="gameType = null"
   />
 </template>

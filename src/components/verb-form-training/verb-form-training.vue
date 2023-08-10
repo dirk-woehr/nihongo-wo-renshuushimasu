@@ -1,7 +1,8 @@
 <script setup lang="ts">
-import styles from "./training.module.css";
+import styles from "./verb-form-training.module.css";
 import { verbs } from "../../data/verbs";
 import MainButton from "../main-button/main-button.vue";
+import TrainingResult from "./verb-form-training-result.vue";
 import { GameTypes, gameTypes } from "../../domain/gameTypes";
 import { computed, ref } from "vue";
 import { GameItem, GameResult } from "../../domain/queues";
@@ -81,7 +82,6 @@ const setUpGameQueue = () => {
       newGameQueue.push(newQueueItem);
     }
   }
-  console.log({ newGameQueue, loopCounter });
   return newGameQueue;
 };
 
@@ -111,30 +111,25 @@ const checkResult = () => {
   if (currentQueueItem.value === null) {
     return;
   }
-  const { targetForm, verbIndex, affirmation } = currentQueueItem.value;
-  const baseWord =
+  const { targetForm, sourceForm, verbIndex, affirmation } =
+    currentQueueItem.value;
+  const sourceBaseWord =
+    verbs[verbIndex].forms[sourceForm][getAffirmation(affirmation)];
+  const targetBaseWord =
     verbs[verbIndex].forms[targetForm][getAffirmation(affirmation)];
-  console.log({
-    affirmation,
-    itemAffirmation: currentQueueItem.value.affirmation,
-  });
+
   results.value = [
     ...results.value,
     {
       ...currentQueueItem.value,
-      match:
-        baseWord.romaji === answer.value ||
-        baseWord.hiragana === answer.value ||
-        baseWord.kanji === answer.value ||
-        baseWord.katakana === answer.value,
       answer: answer.value,
-      baseWord,
+      targetBaseWord,
+      sourceBaseWord,
     },
   ];
   const newQueue = [...gameQueue.value];
   newQueue.pop();
   gameQueue.value = newQueue;
-
   answer.value = "";
 };
 </script>
@@ -157,9 +152,16 @@ const checkResult = () => {
     <MainButton text="Check Result" @buttonClicked="checkResult" />
   </section>
   <section v-if="currentQueueItem === null">
-    <pre v-for="(result, index) in results" :key="index">
-      {{ JSON.stringify(result, null, 2) }}
-    </pre>
+    <table>
+      <TrainingResult
+        v-for="(result, index) in results"
+        :key="index"
+        :result="result"
+        :round="index + 1"
+      >
+        {{ JSON.stringify(result, null, 2) }}
+      </TrainingResult>
+    </table>
     <MainButton
       text="Return to Selection"
       @buttonClicked="emit('trainingFinished')"

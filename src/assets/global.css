@@ -3,8 +3,10 @@
   --color-text: #aaaaaa;
   --color-text-highlight: white;
   --color-text-error: #aa0000;
+  --color-text-error-dark: #aa000090;
   --color-text-success: #00aa00;
-  --color-main-button: LightSeaGreen;
+  --color-text-success-dark: #00aa0090;
+  --color-main-button: rgb(18, 70, 167);
   --text-size-button: 2em;
   --padding: 20px;
   --padding-small: 10px;

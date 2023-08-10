@@ -8,7 +8,7 @@ export type GameItem = {
 };
 
 export type GameResult = GameItem & {
-  match: boolean;
   answer: string;
-  baseWord: BaseWord;
+  sourceBaseWord: BaseWord;
+  targetBaseWord: BaseWord;
 };

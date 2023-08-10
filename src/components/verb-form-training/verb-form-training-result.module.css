@@ -1,0 +1,20 @@
+.success {
+  background-color: var(--color-text-success-dark);
+}
+.successHighlight {
+  background-color: var(--color-text-success);
+  color: var(--color-text-highlight);
+}
+.error {
+  background-color: var(--color-text-error-dark);
+}
+.errorHighlight {
+  background-color: var(--color-text-error);
+  color: var(--color-text-highlight);
+}
+
+td,
+th {
+  text-align: center;
+  padding: var(--padding-small) var(--padding);
+}
