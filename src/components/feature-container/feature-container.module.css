@@ -1,0 +1,18 @@
+.mainSelection {
+  height: var(--height-fullscreen);
+  width: var(--width-fullscreen);
+  background-color: black;
+  display: grid;
+  box-sizing: border-box;
+}
+
+.selectContainer {
+  place-self: center;
+  padding: var(--padding);
+  gap: var(--padding-small);
+  border: 2px solid var(--color-text-highlight);
+  border-radius: var(--padding);
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}

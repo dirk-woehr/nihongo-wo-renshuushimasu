@@ -811,4 +811,94 @@ export const verbs: Verb[] = [
       },
     },
   },
+  {
+    group: "Group 1",
+    meaning: "sein",
+    forms: {
+      nonPast: {
+        positive: {
+          kanji: null,
+          hiragana: "ある",
+          katakana: null,
+          romaji: "aru",
+        },
+        negative: {
+          kanji: null,
+          hiragana: "ない",
+          katakana: null,
+          romaji: "nai",
+        },
+      },
+      nonPastPolite: {
+        positive: {
+          kanji: null,
+          hiragana: "あります",
+          katakana: null,
+          romaji: "arimasu",
+        },
+        negative: {
+          kanji: null,
+          hiragana: "ありません",
+          katakana: null,
+          romaji: "arimasen",
+        },
+      },
+      pastPolite: {
+        positive: {
+          kanji: null,
+          hiragana: "ありました",
+          katakana: null,
+          romaji: "arimashita",
+        },
+        negative: {
+          kanji: null,
+          hiragana: "ありませんでした",
+          katakana: null,
+          romaji: "arimasendeshita",
+        },
+      },
+      past: {
+        positive: {
+          kanji: null,
+          hiragana: "あった",
+          katakana: null,
+          romaji: "atta",
+        },
+        negative: {
+          kanji: null,
+          hiragana: "あらなかった",
+          katakana: null,
+          romaji: "aranakatta",
+        },
+      },
+      teForm: {
+        positive: {
+          kanji: null,
+          hiragana: "あって",
+          katakana: null,
+          romaji: "atte",
+        },
+        negative: {
+          kanji: null,
+          hiragana: "あらないで",
+          katakana: null,
+          romaji: "aranaide",
+        },
+      },
+      potential: {
+        positive: {
+          kanji: null,
+          hiragana: "あれる",
+          katakana: null,
+          romaji: "areru",
+        },
+        negative: {
+          kanji: null,
+          hiragana: "あれない",
+          katakana: null,
+          romaji: "arenai",
+        },
+      },
+    },
+  },
 ];

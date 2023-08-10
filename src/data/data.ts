@@ -1,4 +1,4 @@
-import { verbGroups, WordData } from "../domain/word-types";
+import { WordData } from "../domain/word-types";
 import { verbs } from "./verbs";
 
 export const data: WordData = {

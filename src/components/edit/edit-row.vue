@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { toRef, watchEffect } from "vue";
+import { toRef } from "vue";
 import { VerbForm, VerbForms } from "../../domain/word-types";
 
 const props = defineProps<{
@@ -14,11 +14,6 @@ const props = defineProps<{
 }>();
 
 const verb = toRef({ ...props.verbForm });
-watchEffect(() => {
-  if (verb.value !== undefined) {
-    // props.updateVerbForm(props.index, verb.value, props.formKey);
-  }
-});
 </script>
 <template>
   <tr v-if="verb !== undefined">
