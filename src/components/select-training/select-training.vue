@@ -19,7 +19,7 @@ console.log({ gameType: gameType.value });
 
 <template>
   <FeatureContainer>
-    <RouterLink to="/">Home</RouterLink>
+    <RouterLink :to="{ name: 'Home' }">Home</RouterLink>
     <MainButton
       v-if="gameType === null"
       v-for="(gameKey, index) in gameTypes"

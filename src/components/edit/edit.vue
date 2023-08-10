@@ -97,7 +97,7 @@ const copyVerbList = () => {
 
 <template>
   <FeatureContainer>
-    <RouterLink to="/">Home</RouterLink>
+    <RouterLink :to="{ name: 'Home' }">Home</RouterLink>
     <h1 :class="styles.headline">Edit content:</h1>
     <MainButton text="Copy Verb List" @buttonClicked="copyVerbList" />
     <MainButton text="Add New Verb" @buttonClicked="addNewVerb" />

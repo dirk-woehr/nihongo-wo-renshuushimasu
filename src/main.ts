@@ -9,9 +9,13 @@ import SelectTraining from "./components/select-training/select-training.vue";
 const router = createRouter({
   history: createWebHistory(),
   routes: [
-    { path: "/", name: "Home", component: Home },
-    { path: "/edit", name: "Edit", component: Edit },
-    { path: "/training", name: "Training", component: SelectTraining },
+    { path: "/nihongo-wo-renshuushimasu/", name: "Home", component: Home },
+    { path: "/nihongo-wo-renshuushimasu/edit", name: "Edit", component: Edit },
+    {
+      path: "/nihongo-wo-renshuushimasu/training",
+      name: "Training",
+      component: SelectTraining,
+    },
   ],
 });
 
