@@ -67,6 +67,5 @@ export const setUpVerbFormGameQueue = (gameType: GameTypes, rounds: number) => {
       newGameQueue.push(newQueueItem);
     }
   }
-  console.log({ newGameQueue });
   return newGameQueue;
 };

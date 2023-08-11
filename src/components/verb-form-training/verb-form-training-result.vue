@@ -13,8 +13,6 @@ const match = computed(() => {
   if (targetBaseWord.katakana === answer) return "katakana";
   return null;
 });
-
-console.log({ result: props.result, styles });
 </script>
 
 <template>

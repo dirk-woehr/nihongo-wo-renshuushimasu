@@ -19,7 +19,7 @@ const verbs = ref(rawVerbs);
 const verbIndex = ref(0);
 
 const addNewVerb = () => {
-  verbs.value = [...verbs.value, newVerb];
+  verbs.value = [...verbs.value, { ...JSON.parse(JSON.stringify(newVerb)) }];
 };
 
 const getBaseWord = (baseWord: BaseWord): BaseWord => {
@@ -107,6 +107,7 @@ const copyVerbList = () => {
           <th>Kanji</th>
           <th>Hiragana</th>
           <th>Romaji</th>
+          <th>Group</th>
         </tr>
         <tr
           v-for="(verb, index) in verbs"
@@ -121,6 +122,7 @@ const copyVerbList = () => {
           <td>{{ verb.forms.nonPast.positive.kanji }}</td>
           <td>{{ verb.forms.nonPast.positive.hiragana }}</td>
           <td>{{ verb.forms.nonPast.positive.romaji }}</td>
+          <td>{{ verb.group }}</td>
         </tr>
       </table>
       <form>

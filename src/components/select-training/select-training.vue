@@ -10,11 +10,8 @@ import { ref } from "vue";
 const gameType = ref<GameTypes | null>(null);
 
 const setGameType = (newGameType: GameTypes | null) => {
-  console.log({ newGameType });
   gameType.value = newGameType;
 };
-
-console.log({ gameType: gameType.value });
 </script>
 
 <template>

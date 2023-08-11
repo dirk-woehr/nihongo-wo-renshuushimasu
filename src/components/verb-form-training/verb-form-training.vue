@@ -1,5 +1,5 @@
 <script setup lang="ts">
-// import styles from "./verb-form-training.module.css";
+import styles from "./verb-form-training.module.css";
 import { verbs } from "../../data/verbs";
 import MainButton from "../main-button/main-button.vue";
 import TrainingResult from "./verb-form-training-result.vue";
@@ -32,8 +32,6 @@ const checkResult = () => {
     results.value,
     answer.value
   );
-
-  console.log({ verbFormQueue, verbFormResults });
 
   gameQueue.value = verbFormQueue;
   results.value = verbFormResults;
@@ -69,17 +67,21 @@ const displaySourceWord = computed(() => {
 </script>
 
 <template>
-  <section v-if="currentQueueItem !== null">
-    <h3>
-      Change
-      {{ displaySourceWord }}
-    </h3>
-    <h3>
-      to {{ translatedVerbForms.target }}
-      {{ getAffirmation(currentQueueItem.affirmation) }}
-    </h3>
-    <input type="text" name="answer" id="answer" v-model="answer" />
-    <MainButton text="Check Result" @buttonClicked="checkResult" />
+  <section :class="styles.container" v-if="currentQueueItem !== null">
+    <p :class="styles.mondai">
+      {{ displaySourceWord }} <span :class="styles.arrow">⇒</span>
+      {{ translatedVerbForms.target }}
+    </p>
+    <p>
+      <input
+        :class="styles.kotae"
+        type="text"
+        name="answer"
+        id="answer"
+        v-model="answer"
+      />
+    </p>
+    <MainButton text="Next Question" @buttonClicked="checkResult" />
   </section>
   <section v-if="currentQueueItem === null">
     <table>

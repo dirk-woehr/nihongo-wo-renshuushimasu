@@ -1,1 +1,27 @@
+.container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
 
+.mondai {
+  font-size: 24px;
+  color: var(--color-text-highlight);
+  text-align: center;
+  white-space: nowrap;
+}
+
+.arrow {
+  opacity: 0.5;
+  display: inline-block;
+  margin: 0 var(--padding-small);
+}
+
+.kotae {
+  font-size: 24px;
+  height: 40px;
+  width: 100%;
+  background-color: var(--color-input-background);
+  color: var(--color-text-highlight);
+  border: none;
+}
