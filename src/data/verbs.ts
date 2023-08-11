@@ -167,16 +167,16 @@ export const verbs: Verb[] = [
       },
       potential: {
         positive: {
-          kanji: "来られる",
-          hiragana: "こられる",
+          kanji: "食べられる",
+          hiragana: "たべられる",
           katakana: null,
-          romaji: "korareru",
+          romaji: "taberareru",
         },
         negative: {
-          kanji: "来られない",
-          hiragana: "こられない",
+          kanji: "食べられない",
+          hiragana: "たべられない",
           katakana: null,
-          romaji: "korarenai",
+          romaji: "taberarenai",
         },
       },
     },
