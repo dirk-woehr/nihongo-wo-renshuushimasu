@@ -102,6 +102,7 @@ const displaySourceWord = computed(() => {
         name="answer"
         id="answer"
         v-model="answer"
+        @keyup.enter="checkResult"
         :placeholder="'Enter ' + translatedVerbForms.target + ' Form'"
       />
     </p>
