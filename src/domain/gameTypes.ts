@@ -1,6 +1,7 @@
 export const gameTypes = {
   teForm: "て-Form",
   taForm: "た-Form",
+  potential: "Potential-Form",
   random: "Random",
 } as const;
 

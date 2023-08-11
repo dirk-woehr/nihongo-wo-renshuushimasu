@@ -1,3 +1,4 @@
+// CSS Modules - component class name prefix: VerbFormTrainingResult__
 <script setup lang="ts">
 import { computed } from "vue";
 import { GameResult } from "../../domain/queues";

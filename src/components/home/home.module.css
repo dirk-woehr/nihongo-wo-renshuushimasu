@@ -1,3 +1,11 @@
+.headLine {
+  color: var(--color-text-highlight);
+  white-space: nowrap;
+  font-size: 32px;
+  text-shadow: #fff 0px 0px 15px, #ff682d 0px 0px 20px, #ff682d 0px 0px 30px,
+    #ff682d 0px 0px 40px;
+}
+
 .homeContainer {
   height: var(--height-fullscreen);
   width: var(--width-fullscreen);

@@ -1,15 +1,17 @@
+// CSS Modules - component class name prefix: VerbFormTraining__
 <script setup lang="ts">
 import styles from "./verb-form-training.module.css";
 import { verbs } from "../../data/verbs";
 import MainButton from "../main-button/main-button.vue";
 import TrainingResult from "./verb-form-training-result.vue";
+import HelpBox from "./verb-form-help-box.vue";
 import { GameTypes } from "../../domain/gameTypes";
 import { computed, ref } from "vue";
 import { GameItem, GameResult } from "../../domain/queues";
 import { setUpVerbFormGameQueue } from "../../util/setup-verb-form-game-queue";
 import { checkVerbFormResult } from "../../util/check-verb-form-result";
 import { getAffirmation } from "../../util/get-affirmation";
-import { verbFormTranslation } from "../../domain/word-types";
+import { verbFormTranslation, verbGroups } from "../../domain/word-types";
 
 const emit = defineEmits<{
   (event: "trainingFinished"): void;
@@ -22,6 +24,7 @@ const gameQueue = ref<GameItem[]>(
 );
 const results = ref<GameResult[]>([]);
 const answer = ref("");
+const showHelp = ref(false);
 
 const checkResult = () => {
   if (currentQueueItem.value === null) {
@@ -52,17 +55,26 @@ const translatedVerbForms = computed(() => {
   };
 });
 
-const displaySourceWord = computed(() => {
-  if (currentQueueItem.value === null) return "";
+const group = computed(() => {
+  if (currentQueueItem.value === null) return verbGroups.Group1;
+  return verbs[currentQueueItem.value.verbIndex].group;
+});
+
+const baseWord = computed(() => {
+  if (currentQueueItem.value === null) return null;
   const item = currentQueueItem.value;
-  const baseWord =
-    verbs[item.verbIndex].forms[item.sourceForm][
-      getAffirmation(item.affirmation)
-    ];
-  if (baseWord.kanji !== null) return baseWord.kanji;
-  if (baseWord.hiragana !== null) return baseWord.hiragana;
-  if (baseWord.katakana !== null) return baseWord.katakana;
-  return baseWord.romaji;
+  return verbs[item.verbIndex].forms[item.sourceForm][
+    getAffirmation(item.affirmation)
+  ];
+});
+
+const displaySourceWord = computed(() => {
+  if (currentQueueItem.value === null || baseWord.value === null) return "";
+
+  if (baseWord.value.kanji !== null) return baseWord.value.kanji;
+  if (baseWord.value.hiragana !== null) return baseWord.value.hiragana;
+  if (baseWord.value.katakana !== null) return baseWord.value.katakana;
+  return baseWord.value.romaji;
 });
 </script>
 
@@ -72,6 +84,17 @@ const displaySourceWord = computed(() => {
       {{ displaySourceWord }} <span :class="styles.arrow">⇒</span>
       {{ translatedVerbForms.target }}
     </p>
+    <MainButton
+      v-if="!showHelp"
+      text="Show Help"
+      @buttonClicked="showHelp = true"
+    />
+    <HelpBox
+      v-if="baseWord !== null && showHelp"
+      :baseWord="baseWord"
+      :group="group"
+    />
+    <p>{{ gameQueue.length - 1 }} remaining</p>
     <p>
       <input
         :class="styles.kotae"
@@ -79,12 +102,13 @@ const displaySourceWord = computed(() => {
         name="answer"
         id="answer"
         v-model="answer"
+        :placeholder="'Enter ' + translatedVerbForms.target + ' Form'"
       />
     </p>
     <MainButton text="Next Question" @buttonClicked="checkResult" />
   </section>
-  <section v-if="currentQueueItem === null">
-    <table>
+  <section :class="styles.resultsContainer" v-if="currentQueueItem === null">
+    <table :class="styles.resultsTable">
       <TrainingResult
         v-for="(result, index) in results"
         :key="index"

@@ -16,6 +16,10 @@ export const setUpVerbFormGameQueue = (gameType: GameTypes, rounds: number) => {
       sourceForms.push("nonPast", "nonPastPolite");
       targetForms.push("teForm");
       break;
+    case gameTypes.potential:
+      sourceForms.push("nonPast", "nonPastPolite");
+      targetForms.push("potential");
+      break;
     case gameTypes.random:
       sourceForms.push(
         "nonPast",

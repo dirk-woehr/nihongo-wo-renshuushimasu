@@ -1,3 +1,4 @@
+// CSS Modules - component class name prefix: Edit__
 <script setup lang="ts">
 import styles from "./edit.module.css";
 import { computed, ref } from "vue";

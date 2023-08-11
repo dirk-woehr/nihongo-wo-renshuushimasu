@@ -1,3 +1,4 @@
+// CSS Modules - component class name prefix: MainButton__
 <script setup lang="ts">
 import styles from "./main-button.module.css";
 

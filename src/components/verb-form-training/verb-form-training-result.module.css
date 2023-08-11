@@ -17,4 +17,5 @@ td,
 th {
   text-align: center;
   padding: var(--padding-small) var(--padding);
+  white-space: nowrap;
 }

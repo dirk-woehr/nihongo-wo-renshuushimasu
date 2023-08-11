@@ -1,3 +1,4 @@
+// CSS Modules - component class name prefix: FeatureContainer__
 <script setup lang="ts">
 import styles from "./feature-container.module.css";
 </script>

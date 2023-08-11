@@ -48,9 +48,9 @@ export const verbFormTranslation = (key: string) => {
     case "pastPolite":
       return "Past Polite";
     case "teForm":
-      return "て-Form";
+      return "て-";
     case "potential":
-      return "Potential Form";
+      return "Potential";
 
     default:
       return key;

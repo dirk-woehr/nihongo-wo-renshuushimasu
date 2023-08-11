@@ -24,4 +24,15 @@
   background-color: var(--color-input-background);
   color: var(--color-text-highlight);
   border: none;
+  text-align: center;
+}
+
+.resultsContainer {
+  display: flex;
+  flex-direction: column;
+  gap: var(--padding-small);
+}
+
+.resultsTable {
+  margin-bottom: var(--padding);
 }

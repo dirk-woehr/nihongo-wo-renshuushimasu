@@ -1,3 +1,4 @@
+// CSS Modules - component class name prefix: SelectTraining__
 <script setup lang="ts">
 // import styles from "./select-training.module.css";
 import MainButton from "../main-button/main-button.vue";
