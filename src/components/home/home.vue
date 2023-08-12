@@ -7,7 +7,7 @@ import RouterLink from "../router-link/router-link.vue";
 
 <template>
   <FeatureContainer>
-    <h1 :class="styles.headLine">日本語を練習しましょう！</h1>
+    <h1 :class="styles.headLine">日本語を練習しましょう</h1>
     <RouterLink :to="{ name: 'Training' }">Training</RouterLink>
     <RouterLink :to="{ name: 'Edit' }">Edit Content</RouterLink>
   </FeatureContainer>

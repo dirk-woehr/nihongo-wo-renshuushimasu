@@ -13,6 +13,7 @@ import {
   VerbForms,
   verbGroups,
   verbFormTranslation,
+  VerbFormKeys,
 } from "../../domain/word-types";
 // const { verbs } = data;
 
@@ -40,10 +41,6 @@ const getBaseWord = (baseWord: BaseWord): BaseWord => {
     romaji: baseWord.romaji,
   };
 };
-
-const verbKeys = computed(() => {
-  return Object.keys(verbs.value[verbIndex.value].forms) as (keyof VerbForms)[];
-});
 
 const stringifiedVerbs = computed(() => {
   const newVerbs: Partial<Verb>[] = [];
@@ -83,6 +80,15 @@ const stringifiedVerbs = computed(() => {
 
   return fileHead + JSON.stringify(newVerbs, null, 2) + ";";
 });
+
+const jishoOrder: VerbFormKeys[] = [
+  "nonPast",
+  "nonPastPolite",
+  "past",
+  "pastPolite",
+  "teForm",
+  "potential",
+];
 
 const copyVerbList = () => {
   navigator.clipboard.writeText(stringifiedVerbs.value).then(
@@ -160,7 +166,7 @@ const copyVerbList = () => {
             <th>Romaji</th>
             <th>Katakana</th>
           </tr>
-          <template v-for="formKey in verbKeys" :key="formKey + '_positive'">
+          <template v-for="formKey in jishoOrder" :key="formKey">
             <tr>
               <th :class="styles.editTableHead">
                 {{ verbFormTranslation(formKey) }} Positive

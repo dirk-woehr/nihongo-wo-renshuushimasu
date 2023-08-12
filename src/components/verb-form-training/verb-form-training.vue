@@ -39,6 +39,7 @@ const checkResult = () => {
   gameQueue.value = verbFormQueue;
   results.value = verbFormResults;
   answer.value = "";
+  showHelp.value = false;
 };
 
 const currentQueueItem = computed(() => {
@@ -109,16 +110,14 @@ const displaySourceWord = computed(() => {
     <MainButton text="Next Question" @buttonClicked="checkResult" />
   </section>
   <section :class="styles.resultsContainer" v-if="currentQueueItem === null">
-    <table :class="styles.resultsTable">
-      <TrainingResult
-        v-for="(result, index) in results"
-        :key="index"
-        :result="result"
-        :round="index + 1"
-      >
-        {{ JSON.stringify(result, null, 2) }}
-      </TrainingResult>
-    </table>
+    <TrainingResult
+      v-for="(result, index) in results"
+      :key="index"
+      :result="result"
+      :round="index + 1"
+    >
+      {{ JSON.stringify(result, null, 2) }}
+    </TrainingResult>
     <MainButton
       text="Return to Selection"
       @buttonClicked="emit('trainingFinished')"

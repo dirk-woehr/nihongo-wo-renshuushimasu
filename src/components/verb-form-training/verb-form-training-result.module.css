@@ -4,6 +4,7 @@
 .successHighlight {
   background-color: var(--color-text-success);
   color: var(--color-text-highlight);
+  font-weight: bold;
 }
 .error {
   background-color: var(--color-text-error-dark);
@@ -11,11 +12,77 @@
 .errorHighlight {
   background-color: var(--color-text-error);
   color: var(--color-text-highlight);
+  font-weight: bold;
 }
 
-td,
-th {
+.cell {
   text-align: center;
   padding: var(--padding-small) var(--padding);
   white-space: nowrap;
+  display: inline-block;
+}
+
+.resultsTable {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  width: 100%;
+  grid-template-areas:
+    "round round"
+    "source target"
+    "sourceKanji targetKanji"
+    "sourceHiragana targetHiragana"
+    "sourceRomaji targetRomaji"
+    "sourceKatakana targetKatakana"
+    "answer answer";
+}
+
+@media (min-width: 800px) {
+  .resultsTable {
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-areas:
+      "round round round round round round"
+      "source sourceKanji sourceHiragana sourceRomaji sourceKatakana answer"
+      "target targetKanji targetHiragana targetRomaji targetKatakana answer";
+  }
+}
+
+.round {
+  grid-area: round;
+}
+.source {
+  grid-area: source;
+}
+.sourceKanji {
+  grid-area: sourceKanji;
+}
+.sourceHiragana {
+  grid-area: sourceHiragana;
+}
+.sourceRomaji {
+  grid-area: sourceRomaji;
+}
+.sourceKatakana {
+  grid-area: sourceKatakana;
+}
+.answer {
+  grid-area: answer;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  font-weight: bold;
+}
+.target {
+  grid-area: target;
+}
+.targetKanji {
+  grid-area: targetKanji;
+}
+.targetHiragana {
+  grid-area: targetHiragana;
+}
+.targetRomaji {
+  grid-area: targetRomaji;
+}
+.targetKatakana {
+  grid-area: targetKatakana;
 }

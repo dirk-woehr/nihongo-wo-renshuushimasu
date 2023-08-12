@@ -17,62 +17,85 @@ const match = computed(() => {
 </script>
 
 <template>
-  <tr>
-    <th colspan="6">Round {{ round }}</th>
-  </tr>
-  <tr>
-    <th>Source</th>
-    <td>{{ result.sourceBaseWord.kanji }}</td>
-    <td>{{ result.sourceBaseWord.hiragana }}</td>
-    <td>{{ result.sourceBaseWord.romaji }}</td>
-    <td>{{ result.sourceBaseWord.katakana }}</td>
-    <th>Answer</th>
-  </tr>
-  <tr>
-    <th>Target</th>
-    <td
-      :class="{
-        [styles.success]: match !== null,
-        [styles.error]: match === null,
-        [styles.successHighlight]: match === 'kanji',
-      }"
+  <div :class="styles.resultsTable">
+    <div :class="[styles.round, styles.cell]">Round {{ round }}</div>
+    <div :class="[styles.source, styles.cell]">Source</div>
+    <div :class="[styles.cell, styles.sourceKanji]">
+      {{ result.sourceBaseWord.kanji }}
+    </div>
+    <div :class="[styles.cell, styles.sourceHiragana]">
+      {{ result.sourceBaseWord.hiragana }}
+    </div>
+    <div :class="[styles.cell, styles.sourceRomaji]">
+      {{ result.sourceBaseWord.romaji }}
+    </div>
+    <div :class="[styles.cell, styles.sourceKatakana]">
+      {{ result.sourceBaseWord.katakana }}
+    </div>
+    <div :class="[styles.target, styles.cell]">Target</div>
+    <div
+      :class="[
+        styles.cell,
+        styles.targetKanji,
+        {
+          [styles.success]: match !== null,
+          [styles.error]: match === null,
+          [styles.successHighlight]: match === 'kanji',
+        },
+      ]"
     >
       {{ result.targetBaseWord.kanji }}
-    </td>
-    <td
-      :class="{
-        [styles.success]: match !== null,
-        [styles.error]: match === null,
-        [styles.successHighlight]: match === 'hiragana',
-      }"
+    </div>
+    <div
+      :class="[
+        styles.cell,
+        styles.targetHiragana,
+        {
+          [styles.success]: match !== null,
+          [styles.error]: match === null,
+          [styles.successHighlight]: match === 'hiragana',
+        },
+      ]"
     >
       {{ result.targetBaseWord.hiragana }}
-    </td>
-    <td
-      :class="{
-        [styles.success]: match !== null,
-        [styles.error]: match === null,
-        [styles.successHighlight]: match === 'romaji',
-      }"
+    </div>
+    <div
+      :class="[
+        styles.cell,
+        styles.targetRomaji,
+        {
+          [styles.success]: match !== null,
+          [styles.error]: match === null,
+          [styles.successHighlight]: match === 'romaji',
+        },
+      ]"
     >
       {{ result.targetBaseWord.romaji }}
-    </td>
-    <td
-      :class="{
-        [styles.success]: match !== null,
-        [styles.error]: match === null,
-        [styles.successHighlight]: match === 'katakana',
-      }"
+    </div>
+    <div
+      :class="[
+        styles.cell,
+        styles.targetKatakana,
+        {
+          [styles.success]: match !== null,
+          [styles.error]: match === null,
+          [styles.successHighlight]: match === 'katakana',
+        },
+      ]"
     >
       {{ result.targetBaseWord.katakana }}
-    </td>
-    <td
-      :class="{
-        [styles.errorHighlight]: match === null,
-        [styles.successHighlight]: match !== null,
-      }"
+    </div>
+    <div
+      :class="[
+        styles.cell,
+        styles.answer,
+        {
+          [styles.errorHighlight]: match === null,
+          [styles.successHighlight]: match !== null,
+        },
+      ]"
     >
       {{ result.answer }}
-    </td>
-  </tr>
+    </div>
+  </div>
 </template>
