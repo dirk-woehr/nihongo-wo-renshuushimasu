@@ -18,8 +18,10 @@ const match = computed(() => {
 
 <template>
   <div :class="styles.resultsTable">
-    <div :class="[styles.round, styles.cell]">Round {{ round }}</div>
-    <div :class="[styles.source, styles.cell]">Source</div>
+    <div :class="[styles.round, styles.cell, styles.head]">
+      Round {{ round }}
+    </div>
+    <div :class="[styles.source, styles.cell, styles.head]">Source</div>
     <div :class="[styles.cell, styles.sourceKanji]">
       {{ result.sourceBaseWord.kanji }}
     </div>
@@ -32,7 +34,7 @@ const match = computed(() => {
     <div :class="[styles.cell, styles.sourceKatakana]">
       {{ result.sourceBaseWord.katakana }}
     </div>
-    <div :class="[styles.target, styles.cell]">Target</div>
+    <div :class="[styles.target, styles.cell, styles.head]">Target</div>
     <div
       :class="[
         styles.cell,

@@ -15,13 +15,15 @@ import {
   verbFormTranslation,
   VerbFormKeys,
 } from "../../domain/word-types";
-// const { verbs } = data;
+import { sortyByGroupAndRomaji } from "../../util/sort-verbs-by-group-and-romaji";
 
-const verbs = ref(rawVerbs);
+const verbs = ref(sortyByGroupAndRomaji(rawVerbs));
 const verbIndex = ref(0);
+const showList = ref(false);
 
 const addNewVerb = () => {
   verbs.value = [...verbs.value, { ...JSON.parse(JSON.stringify(newVerb)) }];
+  verbIndex.value = verbs.value.length - 1;
 };
 
 const getBaseWord = (baseWord: BaseWord): BaseWord => {
@@ -109,29 +111,34 @@ const copyVerbList = () => {
     <MainButton text="Copy Verb List" @buttonClicked="copyVerbList" />
     <MainButton text="Add New Verb" @buttonClicked="addNewVerb" />
     <div :class="styles.editContainer">
-      <table :class="styles.verbList">
-        <tr :class="[{ [styles.listRowHead]: true }]">
-          <th>Kanji</th>
-          <th>Hiragana</th>
-          <th>Romaji</th>
-          <th>Group</th>
-        </tr>
-        <tr
-          v-for="(verb, index) in verbs"
-          :key="index"
-          @click="verbIndex = index"
-          :class="[
-            { [styles.active]: index === verbIndex },
-            { [styles.listRow]: true },
-          ]"
-          class="listRow"
-        >
-          <td>{{ verb.forms.nonPast.positive.kanji }}</td>
-          <td>{{ verb.forms.nonPast.positive.hiragana }}</td>
-          <td>{{ verb.forms.nonPast.positive.romaji }}</td>
-          <td>{{ verb.group }}</td>
-        </tr>
-      </table>
+      <div class="listContainer">
+        <button @click="showList = !showList" :class="styles.toggleList">
+          {{ showList ? "Hide" : "Show" }} List
+        </button>
+        <table :class="styles.verbList" v-if="showList">
+          <tr :class="[{ [styles.listRowHead]: true }]">
+            <th>Kanji</th>
+            <th>Hiragana</th>
+            <th>Romaji</th>
+            <th>Group</th>
+          </tr>
+          <tr
+            v-for="(verb, index) in verbs"
+            :key="index"
+            @click="verbIndex = index"
+            :class="[
+              { [styles.active]: index === verbIndex },
+              { [styles.listRow]: true },
+            ]"
+            class="listRow"
+          >
+            <td>{{ verb.forms.nonPast.positive.kanji }}</td>
+            <td>{{ verb.forms.nonPast.positive.hiragana }}</td>
+            <td>{{ verb.forms.nonPast.positive.romaji }}</td>
+            <td>{{ verb.group }}</td>
+          </tr>
+        </table>
+      </div>
       <form>
         <table :class="styles.editTable">
           <tr>

@@ -24,6 +24,8 @@
 .listRow > td,
 .listRowHead > th {
   padding: 3px;
+  white-space: nowrap;
+  min-width: 100px;
 }
 
 .listRowHead {
@@ -36,4 +38,8 @@
 
 table {
   border-collapse: collapse;
+}
+
+.toggleList {
+  white-space: nowrap;
 }
