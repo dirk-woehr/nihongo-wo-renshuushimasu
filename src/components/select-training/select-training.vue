@@ -10,7 +10,9 @@ import { GameTypes, gameTypes } from "../../domain/gameTypes";
 import { ref, watch } from "vue";
 
 const gameType = ref<GameTypes | null>(null);
-const rounds = ref<number>(localStorage.rounds ? localStorage.rounds : 10);
+const rounds = ref<number>(
+  localStorage.rounds ? parseInt(localStorage.rounds) : 10
+);
 
 const MAX_ROUNDS = 30;
 

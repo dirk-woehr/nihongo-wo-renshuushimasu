@@ -80,7 +80,11 @@ const stringifiedVerbs = computed(() => {
   const fileHead =
     'import { Verb } from "../domain/word-types";\n\nexport const verbs:Verb[] = ';
 
-  return fileHead + JSON.stringify(newVerbs, null, 2) + ";";
+  return (
+    fileHead +
+    JSON.stringify(sortyByGroupAndRomaji(newVerbs as Verb[]), null, 2) +
+    ";"
+  );
 });
 
 const jishoOrder: VerbFormKeys[] = [

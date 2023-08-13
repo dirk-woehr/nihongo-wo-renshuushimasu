@@ -86,7 +86,8 @@ const match = computed(() => {
         },
       ]"
     >
-      {{ result.targetBaseWord.kanji }}{{ teExtension.kanji }}
+      {{ result.targetBaseWord.kanji
+      }}{{ result.targetBaseWord.kanji && teExtension.kanji }}
     </div>
     <div
       :class="[
@@ -99,7 +100,8 @@ const match = computed(() => {
         },
       ]"
     >
-      {{ result.targetBaseWord.hiragana }}{{ teExtension.hiragana }}
+      {{ result.targetBaseWord.hiragana
+      }}{{ result.targetBaseWord.hiragana && teExtension.hiragana }}
     </div>
     <div
       :class="[
