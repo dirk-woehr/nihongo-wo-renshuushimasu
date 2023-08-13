@@ -3,15 +3,49 @@
 import { computed } from "vue";
 import { GameResult } from "../../domain/queues";
 import styles from "./verb-form-training-result.module.css";
-const props = defineProps<{ result: GameResult; round: number }>();
+import { BaseWord, VerbFormKeys } from "../../domain/word-types";
+const props = defineProps<{
+  result: GameResult;
+  round: number;
+  verbForm: VerbFormKeys;
+  affirmation: boolean;
+}>();
 
 const { targetBaseWord, answer } = props.result;
 
 const safeCompare = (target: string | null, answer: string) => {
-  return (
-    target?.trim().toLocaleLowerCase() === answer.trim().toLocaleLowerCase()
-  );
+  const trimmedTarget = target?.trim().toLocaleLowerCase();
+  const trimmedAnswer = answer.trim().toLocaleLowerCase();
+  if (trimmedTarget === trimmedAnswer) {
+    return true;
+  }
+  const isNegativeTeForm = props.verbForm === "teForm" && !props.affirmation;
+  if (isNegativeTeForm) {
+    const naiForm = trimmedTarget
+      ?.replace("nakute", "naide")
+      .replace("なくて", "ないで");
+    return naiForm === answer;
+  }
+  return false;
 };
+
+const teExtension = computed(() => {
+  const extension: BaseWord =
+    props.verbForm === "teForm" && !props.affirmation
+      ? {
+          romaji: "/~naide",
+          hiragana: "/~ないで",
+          kanji: "/~ないで",
+          katakana: null,
+        }
+      : {
+          romaji: "",
+          hiragana: null,
+          kanji: null,
+          katakana: null,
+        };
+  return extension;
+});
 
 const match = computed(() => {
   if (safeCompare(targetBaseWord.romaji, answer)) return "romaji";
@@ -52,7 +86,7 @@ const match = computed(() => {
         },
       ]"
     >
-      {{ result.targetBaseWord.kanji }}
+      {{ result.targetBaseWord.kanji }}{{ teExtension.kanji }}
     </div>
     <div
       :class="[
@@ -65,7 +99,7 @@ const match = computed(() => {
         },
       ]"
     >
-      {{ result.targetBaseWord.hiragana }}
+      {{ result.targetBaseWord.hiragana }}{{ teExtension.hiragana }}
     </div>
     <div
       :class="[
@@ -78,7 +112,7 @@ const match = computed(() => {
         },
       ]"
     >
-      {{ result.targetBaseWord.romaji }}
+      {{ result.targetBaseWord.romaji }}{{ teExtension.romaji }}
     </div>
     <div
       :class="[

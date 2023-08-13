@@ -47,7 +47,6 @@ const checkResult = () => {
   results.value = verbFormResults;
   answer.value = "";
   showHelp.value = false;
-  document.getElementById("answer")?.focus();
 };
 
 const translatedVerbForms = computed(() => {
@@ -117,6 +116,8 @@ const displaySourceWord = computed(() => {
       :key="index"
       :result="result"
       :round="index + 1"
+      :verbForm="result.targetForm"
+      :affirmation="result.affirmation"
     >
       {{ JSON.stringify(result, null, 2) }}
     </TrainingResult>

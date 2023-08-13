@@ -553,7 +553,7 @@ export const verbs: Verb[] = [
           romaji: "naru",
         },
         negative: {
-          kanji: "成らない",
+          kanji: null,
           hiragana: "ならない",
           katakana: null,
           romaji: "naranai",
@@ -1150,9 +1150,9 @@ export const verbs: Verb[] = [
         },
         negative: {
           kanji: null,
-          hiragana: "あらないで",
+          hiragana: "あらなくて",
           katakana: null,
-          romaji: "aranaide",
+          romaji: "aranakute",
         },
       },
       potential: {
@@ -2173,7 +2173,7 @@ export const verbs: Verb[] = [
           romaji: "suru",
         },
         negative: {
-          kanji: "為ない",
+          kanji: null,
           hiragana: "しない",
           katakana: null,
           romaji: "shinai",
