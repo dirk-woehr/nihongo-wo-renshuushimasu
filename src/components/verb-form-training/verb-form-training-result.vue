@@ -7,11 +7,17 @@ const props = defineProps<{ result: GameResult; round: number }>();
 
 const { targetBaseWord, answer } = props.result;
 
+const safeCompare = (target: string | null, answer: string) => {
+  return (
+    target?.trim().toLocaleLowerCase() === answer.trim().toLocaleLowerCase()
+  );
+};
+
 const match = computed(() => {
-  if (targetBaseWord.romaji === answer) return "romaji";
-  if (targetBaseWord.hiragana === answer) return "hiragana";
-  if (targetBaseWord.kanji === answer) return "kanji";
-  if (targetBaseWord.katakana === answer) return "katakana";
+  if (safeCompare(targetBaseWord.romaji, answer)) return "romaji";
+  if (safeCompare(targetBaseWord.hiragana, answer)) return "hiragana";
+  if (safeCompare(targetBaseWord.kanji, answer)) return "kanji";
+  if (safeCompare(targetBaseWord.katakana, answer)) return "katakana";
   return null;
 });
 </script>

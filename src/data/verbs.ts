@@ -3,96 +3,6 @@ import { Verb } from "../domain/word-types";
 export const verbs: Verb[] = [
   {
     group: "Group 1",
-    meaning: "sein (Dinge)",
-    forms: {
-      nonPast: {
-        positive: {
-          kanji: null,
-          hiragana: "ある",
-          katakana: null,
-          romaji: "aru",
-        },
-        negative: {
-          kanji: null,
-          hiragana: "ない",
-          katakana: null,
-          romaji: "nai",
-        },
-      },
-      nonPastPolite: {
-        positive: {
-          kanji: null,
-          hiragana: "あります",
-          katakana: null,
-          romaji: "arimasu",
-        },
-        negative: {
-          kanji: null,
-          hiragana: "ありません",
-          katakana: null,
-          romaji: "arimasen",
-        },
-      },
-      pastPolite: {
-        positive: {
-          kanji: null,
-          hiragana: "ありました",
-          katakana: null,
-          romaji: "arimashita",
-        },
-        negative: {
-          kanji: null,
-          hiragana: "ありませんでした",
-          katakana: null,
-          romaji: "arimasendeshita",
-        },
-      },
-      past: {
-        positive: {
-          kanji: null,
-          hiragana: "あった",
-          katakana: null,
-          romaji: "atta",
-        },
-        negative: {
-          kanji: null,
-          hiragana: "あらなかった",
-          katakana: null,
-          romaji: "aranakatta",
-        },
-      },
-      teForm: {
-        positive: {
-          kanji: null,
-          hiragana: "あって",
-          katakana: null,
-          romaji: "atte",
-        },
-        negative: {
-          kanji: null,
-          hiragana: "あらないで",
-          katakana: null,
-          romaji: "aranaide",
-        },
-      },
-      potential: {
-        positive: {
-          kanji: null,
-          hiragana: "あれる",
-          katakana: null,
-          romaji: "areru",
-        },
-        negative: {
-          kanji: null,
-          hiragana: "あれない",
-          katakana: null,
-          romaji: "arenai",
-        },
-      },
-    },
-  },
-  {
-    group: "Group 1",
     meaning: "werden",
     forms: {
       nonPast: {
@@ -993,6 +903,96 @@ export const verbs: Verb[] = [
   },
   {
     group: "Group 2",
+    meaning: "sein (Dinge)",
+    forms: {
+      nonPast: {
+        positive: {
+          kanji: null,
+          hiragana: "ある",
+          katakana: null,
+          romaji: "aru",
+        },
+        negative: {
+          kanji: null,
+          hiragana: "ない",
+          katakana: null,
+          romaji: "nai",
+        },
+      },
+      nonPastPolite: {
+        positive: {
+          kanji: null,
+          hiragana: "あります",
+          katakana: null,
+          romaji: "arimasu",
+        },
+        negative: {
+          kanji: null,
+          hiragana: "ありません",
+          katakana: null,
+          romaji: "arimasen",
+        },
+      },
+      pastPolite: {
+        positive: {
+          kanji: null,
+          hiragana: "ありました",
+          katakana: null,
+          romaji: "arimashita",
+        },
+        negative: {
+          kanji: null,
+          hiragana: "ありませんでした",
+          katakana: null,
+          romaji: "arimasendeshita",
+        },
+      },
+      past: {
+        positive: {
+          kanji: null,
+          hiragana: "あった",
+          katakana: null,
+          romaji: "atta",
+        },
+        negative: {
+          kanji: null,
+          hiragana: "あらなかった",
+          katakana: null,
+          romaji: "aranakatta",
+        },
+      },
+      teForm: {
+        positive: {
+          kanji: null,
+          hiragana: "あって",
+          katakana: null,
+          romaji: "atte",
+        },
+        negative: {
+          kanji: null,
+          hiragana: "あらないで",
+          katakana: null,
+          romaji: "aranaide",
+        },
+      },
+      potential: {
+        positive: {
+          kanji: null,
+          hiragana: "あれる",
+          katakana: null,
+          romaji: "areru",
+        },
+        negative: {
+          kanji: null,
+          hiragana: "あれない",
+          katakana: null,
+          romaji: "arenai",
+        },
+      },
+    },
+  },
+  {
+    group: "Group 2",
     meaning: "hineintun",
     forms: {
       nonPast: {
@@ -1718,13 +1718,13 @@ export const verbs: Verb[] = [
       nonPast: {
         positive: {
           kanji: "忘れる",
-          hiragana: " わすれる",
+          hiragana: "わすれる",
           katakana: null,
           romaji: "wasureru",
         },
         negative: {
           kanji: "忘れない",
-          hiragana: " わすれない",
+          hiragana: "わすれない",
           katakana: null,
           romaji: "wasurenai",
         },
@@ -1732,13 +1732,13 @@ export const verbs: Verb[] = [
       nonPastPolite: {
         positive: {
           kanji: "忘れます",
-          hiragana: " わすれます",
+          hiragana: "わすれます",
           katakana: null,
           romaji: "wasuremasu",
         },
         negative: {
           kanji: "忘れません",
-          hiragana: " わすれません",
+          hiragana: "わすれません",
           katakana: null,
           romaji: "wasuremasen",
         },
@@ -1746,13 +1746,13 @@ export const verbs: Verb[] = [
       pastPolite: {
         positive: {
           kanji: "忘れました",
-          hiragana: " わすれました",
+          hiragana: "わすれました",
           katakana: null,
           romaji: "wasuremashita",
         },
         negative: {
           kanji: "忘れませんでした",
-          hiragana: " わすれませんでした",
+          hiragana: "わすれませんでした",
           katakana: null,
           romaji: "wasuremasendeshita",
         },
@@ -1760,13 +1760,13 @@ export const verbs: Verb[] = [
       past: {
         positive: {
           kanji: "忘れた",
-          hiragana: " わすれた",
+          hiragana: "わすれた",
           katakana: null,
           romaji: "wasureta",
         },
         negative: {
           kanji: "忘れなかった",
-          hiragana: " わすれなかった",
+          hiragana: "わすれなかった",
           katakana: null,
           romaji: "wasurenakatta",
         },
@@ -1774,13 +1774,13 @@ export const verbs: Verb[] = [
       teForm: {
         positive: {
           kanji: "忘れて",
-          hiragana: " わすれて",
+          hiragana: "わすれて",
           katakana: null,
           romaji: "wasurete",
         },
         negative: {
           kanji: "忘れなくて",
-          hiragana: " わすれなくて",
+          hiragana: "わすれなくて",
           katakana: null,
           romaji: "wasurenakute",
         },
@@ -1788,13 +1788,13 @@ export const verbs: Verb[] = [
       potential: {
         positive: {
           kanji: "忘れられる",
-          hiragana: " わすれられる",
+          hiragana: "わすれられる",
           katakana: null,
           romaji: "wasurerareru",
         },
         negative: {
           kanji: "忘れられない",
-          hiragana: " わすれられない",
+          hiragana: "わすれられない",
           katakana: null,
           romaji: "wasurerarenai",
         },
