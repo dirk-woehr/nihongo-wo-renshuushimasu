@@ -6,7 +6,7 @@ import MainButton from "../main-button/main-button.vue";
 import TrainingResult from "./verb-form-training-result.vue";
 import HelpBox from "./verb-form-help-box.vue";
 import { GameTypes } from "../../domain/gameTypes";
-import { computed, onUpdated, ref } from "vue";
+import { computed, ref } from "vue";
 import { GameItem, GameResult } from "../../domain/queues";
 import { setUpVerbFormGameQueue } from "../../util/setup-verb-form-game-queue";
 import { checkVerbFormResult } from "../../util/check-verb-form-result";
@@ -47,6 +47,7 @@ const checkResult = () => {
   results.value = verbFormResults;
   answer.value = "";
   showHelp.value = false;
+  document.getElementById("answer")?.focus();
 };
 
 const translatedVerbForms = computed(() => {
@@ -76,10 +77,6 @@ const displaySourceWord = computed(() => {
   if (baseWord.value.hiragana !== null) return baseWord.value.hiragana;
   if (baseWord.value.katakana !== null) return baseWord.value.katakana;
   return baseWord.value.romaji;
-});
-
-onUpdated(() => {
-  document.getElementById("answer")?.focus();
 });
 </script>
 

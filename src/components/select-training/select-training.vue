@@ -12,6 +12,8 @@ import { ref, watch } from "vue";
 const gameType = ref<GameTypes | null>(null);
 const rounds = ref<number>(localStorage.rounds ? localStorage.rounds : 10);
 
+const MAX_ROUNDS = 30;
+
 const setGameType = (newGameType: GameTypes | null) => {
   gameType.value = newGameType;
 };
@@ -22,6 +24,15 @@ watch(
     if (newValue !== oldValue) localStorage.rounds = newValue;
   }
 );
+
+const setRounds = (e: Event) => {
+  const { value } = e.target as HTMLInputElement;
+  const num = parseInt(value);
+  if (num < 1 || num > MAX_ROUNDS) {
+    return;
+  }
+  rounds.value = Math.floor(num);
+};
 </script>
 
 <template>
@@ -37,10 +48,13 @@ watch(
         />
         <input
           :class="styles.rounds"
+          :min="1"
+          :max="MAX_ROUNDS"
           type="number"
           name="rounds"
           id="rounds"
-          v-model="rounds"
+          :value="rounds"
+          @change="setRounds"
         />
         <SmallButton
           text="+"
