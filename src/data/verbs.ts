@@ -3,6 +3,96 @@ import { Verb } from "../domain/word-types";
 export const verbs: Verb[] = [
   {
     group: "Group 1",
+    meaning: "sprechen",
+    forms: {
+      nonPast: {
+        positive: {
+          kanji: "話す",
+          hiragana: "話す",
+          katakana: null,
+          romaji: "",
+        },
+        negative: {
+          kanji: "話さない",
+          hiragana: "話さない",
+          katakana: null,
+          romaji: "",
+        },
+      },
+      nonPastPolite: {
+        positive: {
+          kanji: "話します",
+          hiragana: "話します",
+          katakana: null,
+          romaji: "",
+        },
+        negative: {
+          kanji: "話しません",
+          hiragana: "話しません",
+          katakana: null,
+          romaji: "",
+        },
+      },
+      pastPolite: {
+        positive: {
+          kanji: "話しました",
+          hiragana: "話しました",
+          katakana: null,
+          romaji: "",
+        },
+        negative: {
+          kanji: "話しませんでした",
+          hiragana: "話しませんでした",
+          katakana: null,
+          romaji: "",
+        },
+      },
+      past: {
+        positive: {
+          kanji: "話した",
+          hiragana: "話した",
+          katakana: null,
+          romaji: "",
+        },
+        negative: {
+          kanji: "話さなかった",
+          hiragana: "話さなかった",
+          katakana: null,
+          romaji: "",
+        },
+      },
+      teForm: {
+        positive: {
+          kanji: "話して",
+          hiragana: "話して",
+          katakana: null,
+          romaji: "",
+        },
+        negative: {
+          kanji: "話さなくて",
+          hiragana: "話さなくて",
+          katakana: null,
+          romaji: "",
+        },
+      },
+      potential: {
+        positive: {
+          kanji: "話せる",
+          hiragana: "話せる",
+          katakana: null,
+          romaji: "",
+        },
+        negative: {
+          kanji: "話せない",
+          hiragana: "話せない",
+          katakana: null,
+          romaji: "",
+        },
+      },
+    },
+  },
+  {
+    group: "Group 1",
     meaning: "werden",
     forms: {
       nonPast: {
@@ -1437,6 +1527,96 @@ export const verbs: Verb[] = [
           hiragana: "ねられない",
           katakana: null,
           romaji: "nerarenai",
+        },
+      },
+    },
+  },
+  {
+    group: "Group 2",
+    meaning: "aufstehen",
+    forms: {
+      nonPast: {
+        positive: {
+          kanji: "起きる",
+          hiragana: "おきる",
+          katakana: null,
+          romaji: "okiru",
+        },
+        negative: {
+          kanji: "起きない",
+          hiragana: "おきない",
+          katakana: null,
+          romaji: "okinai",
+        },
+      },
+      nonPastPolite: {
+        positive: {
+          kanji: "起きます",
+          hiragana: "おきます",
+          katakana: null,
+          romaji: "okimasu",
+        },
+        negative: {
+          kanji: "起きません",
+          hiragana: "おきません",
+          katakana: null,
+          romaji: "okimasen",
+        },
+      },
+      pastPolite: {
+        positive: {
+          kanji: "起きました",
+          hiragana: "おきました",
+          katakana: null,
+          romaji: "okimashita",
+        },
+        negative: {
+          kanji: "起きませんでした",
+          hiragana: "おきませんでした",
+          katakana: null,
+          romaji: "okimasendeshita",
+        },
+      },
+      past: {
+        positive: {
+          kanji: "起きた",
+          hiragana: "おきた",
+          katakana: null,
+          romaji: "okita",
+        },
+        negative: {
+          kanji: "起きなかった",
+          hiragana: "おきなかった",
+          katakana: null,
+          romaji: "okinakatta",
+        },
+      },
+      teForm: {
+        positive: {
+          kanji: "起きて",
+          hiragana: "おきて",
+          katakana: null,
+          romaji: "okite",
+        },
+        negative: {
+          kanji: "起きなくて",
+          hiragana: "おきなくて",
+          katakana: null,
+          romaji: "okinakute",
+        },
+      },
+      potential: {
+        positive: {
+          kanji: "起きられる",
+          hiragana: "おきられる",
+          katakana: null,
+          romaji: "okirareru",
+        },
+        negative: {
+          kanji: "起きられない",
+          hiragana: "おきられない",
+          katakana: null,
+          romaji: "okirarenai",
         },
       },
     },
