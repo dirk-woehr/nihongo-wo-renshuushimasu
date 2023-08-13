@@ -8,11 +8,14 @@
   --color-text-success-dark: #00aa0090;
   --color-main-button: rgb(18, 70, 167);
   --color-input-background: rgba(182, 69, 25, 0.342);
-  --text-size-button: 2em;
+  --color-button-border: #ff5b20;
+  --font-size-button: 2em;
+  --font-size-input: 24px;
   --padding: 20px;
   --padding-small: 10px;
   --height-fullscreen: 100svh;
   --width-fullscreen: 100svw;
+  --height-input: 40px;
 }
 
 html {

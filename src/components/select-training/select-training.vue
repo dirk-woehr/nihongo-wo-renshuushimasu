@@ -2,6 +2,7 @@
 <script setup lang="ts">
 import styles from "./select-training.module.css";
 import MainButton from "../main-button/main-button.vue";
+import SmallButton from "../small-button/small-button.vue";
 import VerbFormTraining from "../verb-form-training/verb-form-training.vue";
 import FeatureContainer from "../feature-container/feature-container.vue";
 import RouterLink from "../router-link/router-link.vue";
@@ -29,12 +30,22 @@ watch(
     <template v-if="gameType === null">
       <div :class="styles.rounds">
         <label :class="styles.rounds" for="rounds">Rounds: </label>
+        <SmallButton
+          text="-"
+          @buttonClicked="rounds--"
+          :disabled="rounds < 2"
+        />
         <input
           :class="styles.rounds"
           type="number"
           name="rounds"
           id="rounds"
           v-model="rounds"
+        />
+        <SmallButton
+          text="+"
+          @buttonClicked="rounds++"
+          :disabled="rounds > 29"
         />
       </div>
       <MainButton

@@ -13,6 +13,8 @@ input.rounds {
   color: var(--color-text-highlight);
   border: none;
   text-align: center;
+  border: 2px solid var(--color-button-border);
+  border-radius: 5px;
 }
 
 label.rounds {

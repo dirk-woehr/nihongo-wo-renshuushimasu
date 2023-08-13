@@ -1,0 +1,19 @@
+.smallButton {
+  font-size: var(--font-size-button);
+  height: var(--height-input);
+  min-width: var(--height-input);
+  color: var(--color-text-highlight);
+  border: 2px solid var(--color-button-border);
+  border-radius: 5px;
+  background-color: var(--color-input-background);
+  display: flex;
+  justify-content: center;
+}
+
+.smallButton:hover {
+  background-color: var(--color-button-border);
+}
+
+.smallButton:disabled {
+  opacity: 0.5;
+}

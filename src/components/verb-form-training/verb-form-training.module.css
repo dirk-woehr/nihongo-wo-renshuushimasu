@@ -18,12 +18,13 @@
 }
 
 .kotae {
-  font-size: 24px;
-  height: 40px;
+  font-size: var(--font-size-input);
+  height: var(--height-input);
   width: 100%;
   background-color: var(--color-input-background);
+  border: 2px solid var(--color-button-border);
+  border-radius: 5px;
   color: var(--color-text-highlight);
-  border: none;
   text-align: center;
 }
 

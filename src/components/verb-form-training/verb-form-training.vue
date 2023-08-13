@@ -26,6 +26,13 @@ const results = ref<GameResult[]>([]);
 const answer = ref("");
 const showHelp = ref(false);
 
+const currentQueueItem = computed(() => {
+  if (gameQueue.value.length > 0) {
+    return gameQueue.value[gameQueue.value.length - 1];
+  }
+  return null;
+});
+
 const checkResult = () => {
   if (currentQueueItem.value === null) {
     return;
@@ -40,14 +47,8 @@ const checkResult = () => {
   results.value = verbFormResults;
   answer.value = "";
   showHelp.value = false;
+  if (currentQueueItem !== null) document.getElementById("answer")?.focus();
 };
-
-const currentQueueItem = computed(() => {
-  if (gameQueue.value.length > 0) {
-    return gameQueue.value[gameQueue.value.length - 1];
-  }
-  return null;
-});
 
 const translatedVerbForms = computed(() => {
   return {
