@@ -4,6 +4,7 @@ import { computed } from "vue";
 import { GameResult } from "../../domain/queues";
 import styles from "./verb-form-training-result.module.css";
 import { BaseWord, VerbFormKeys } from "../../domain/word-types";
+import { checkResult } from "../../util/check-result";
 const props = defineProps<{
   result: GameResult;
   round: number;
@@ -11,27 +12,11 @@ const props = defineProps<{
   affirmation: boolean;
 }>();
 
-const { targetBaseWord, answer } = props.result;
-
-const safeCompare = (target: string | null, answer: string) => {
-  const trimmedTarget = target?.trim().toLocaleLowerCase();
-  const trimmedAnswer = answer.trim().toLocaleLowerCase();
-  if (trimmedTarget === trimmedAnswer) {
-    return true;
-  }
-  const isNegativeTeForm = props.verbForm === "teForm" && !props.affirmation;
-  if (isNegativeTeForm) {
-    const naiForm = trimmedTarget
-      ?.replace("nakute", "naide")
-      .replace("なくて", "ないで");
-    return naiForm === answer;
-  }
-  return false;
-};
+const { targetBaseWord, answer, affirmation } = props.result;
 
 const teExtension = computed(() => {
   const extension: BaseWord =
-    props.verbForm === "teForm" && !props.affirmation
+    props.verbForm === "teForm" && !affirmation
       ? {
           romaji: "/~naide",
           hiragana: "/~ないで",
@@ -48,11 +33,7 @@ const teExtension = computed(() => {
 });
 
 const match = computed(() => {
-  if (safeCompare(targetBaseWord.romaji, answer)) return "romaji";
-  if (safeCompare(targetBaseWord.hiragana, answer)) return "hiragana";
-  if (safeCompare(targetBaseWord.kanji, answer)) return "kanji";
-  if (safeCompare(targetBaseWord.katakana, answer)) return "katakana";
-  return null;
+  return checkResult(targetBaseWord, answer, props.verbForm, affirmation);
 });
 </script>
 

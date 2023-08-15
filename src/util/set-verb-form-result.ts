@@ -2,16 +2,16 @@ import { verbs } from "../data/verbs";
 import { GameItem, GameResult } from "../domain/queues";
 import { getAffirmation } from "./get-affirmation";
 
-export type CheckVerbFormResults = {
+export type SetVerbFormResults = {
   verbFormQueue: GameItem[];
   verbFormResults: GameResult[];
 };
 
-export const checkVerbFormResult = (
+export const setVerbFormResult = (
   queue: GameItem[],
   results: GameResult[],
   answer: string
-): CheckVerbFormResults => {
+): SetVerbFormResults => {
   const currentQueueItem = queue.pop();
 
   const verbFormQueue: GameItem[] = [...queue];

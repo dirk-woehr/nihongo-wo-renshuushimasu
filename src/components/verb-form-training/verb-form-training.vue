@@ -9,13 +9,18 @@ import { GameTypes } from "../../domain/gameTypes";
 import { computed, ref } from "vue";
 import { GameItem, GameResult } from "../../domain/queues";
 import { setUpVerbFormGameQueue } from "../../util/setup-verb-form-game-queue";
-import { checkVerbFormResult } from "../../util/check-verb-form-result";
+import { setVerbFormResult } from "../../util/set-verb-form-result";
 import { getAffirmation } from "../../util/get-affirmation";
 import { verbFormTranslation, verbGroups } from "../../domain/word-types";
+import { getResultToast } from "../../util/get-result-toast";
+
+import { useToast } from "vue-toastification";
 
 const emit = defineEmits<{
   (event: "trainingFinished"): void;
 }>();
+
+const toast = useToast();
 
 const props = defineProps<{ gameType: GameTypes; rounds: number }>();
 
@@ -33,15 +38,24 @@ const currentQueueItem = computed(() => {
   return null;
 });
 
-const checkResult = () => {
+const setResult = () => {
   if (currentQueueItem.value === null) {
     return;
   }
-  const { verbFormQueue, verbFormResults } = checkVerbFormResult(
+
+  const { verbFormQueue, verbFormResults } = setVerbFormResult(
     gameQueue.value,
     results.value,
     answer.value
   );
+
+  const toastContent = getResultToast(
+    verbFormResults[verbFormResults.length - 1]
+  );
+  console.log({ toastContent });
+  toast(toastContent.message, {
+    type: toastContent.type,
+  });
 
   gameQueue.value = verbFormQueue;
   results.value = verbFormResults;
@@ -104,11 +118,11 @@ const displaySourceWord = computed(() => {
         id="answer"
         autofocus
         v-model="answer"
-        @keyup.enter="checkResult"
+        @keyup.enter="setResult"
         :placeholder="'Enter ' + translatedVerbForms.target + ' Form'"
       />
     </p>
-    <MainButton text="Next Question" @buttonClicked="checkResult" />
+    <MainButton text="Next Question" @buttonClicked="setResult" />
   </section>
   <section :class="styles.resultsContainer" v-if="currentQueueItem === null">
     <TrainingResult
@@ -127,3 +141,4 @@ const displaySourceWord = computed(() => {
     />
   </section>
 </template>
+../../util/set-verb-form-result
