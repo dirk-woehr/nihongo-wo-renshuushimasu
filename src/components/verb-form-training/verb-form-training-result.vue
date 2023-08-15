@@ -4,7 +4,6 @@ import { computed } from "vue";
 import { GameResult } from "../../domain/queues";
 import styles from "./verb-form-training-result.module.css";
 import { BaseWord, VerbFormKeys } from "../../domain/word-types";
-import { checkResult } from "../../util/check-result";
 const props = defineProps<{
   result: GameResult;
   round: number;
@@ -12,7 +11,7 @@ const props = defineProps<{
   affirmation: boolean;
 }>();
 
-const { targetBaseWord, answer, affirmation } = props.result;
+const { affirmation } = props.result;
 
 const teExtension = computed(() => {
   const extension: BaseWord =
@@ -30,10 +29,6 @@ const teExtension = computed(() => {
           katakana: null,
         };
   return extension;
-});
-
-const match = computed(() => {
-  return checkResult(targetBaseWord, answer, props.verbForm, affirmation);
 });
 </script>
 
@@ -61,9 +56,9 @@ const match = computed(() => {
         styles.cell,
         styles.targetKanji,
         {
-          [styles.success]: match !== null,
-          [styles.error]: match === null,
-          [styles.successHighlight]: match === 'kanji',
+          [styles.success]: result.match !== null,
+          [styles.error]: result.match === null,
+          [styles.successHighlight]: result.match === 'kanji',
         },
       ]"
     >
@@ -75,9 +70,9 @@ const match = computed(() => {
         styles.cell,
         styles.targetHiragana,
         {
-          [styles.success]: match !== null,
-          [styles.error]: match === null,
-          [styles.successHighlight]: match === 'hiragana',
+          [styles.success]: result.match !== null,
+          [styles.error]: result.match === null,
+          [styles.successHighlight]: result.match === 'hiragana',
         },
       ]"
     >
@@ -89,9 +84,9 @@ const match = computed(() => {
         styles.cell,
         styles.targetRomaji,
         {
-          [styles.success]: match !== null,
-          [styles.error]: match === null,
-          [styles.successHighlight]: match === 'romaji',
+          [styles.success]: result.match !== null,
+          [styles.error]: result.match === null,
+          [styles.successHighlight]: result.match === 'romaji',
         },
       ]"
     >
@@ -102,9 +97,9 @@ const match = computed(() => {
         styles.cell,
         styles.targetKatakana,
         {
-          [styles.success]: match !== null,
-          [styles.error]: match === null,
-          [styles.successHighlight]: match === 'katakana',
+          [styles.success]: result.match !== null,
+          [styles.error]: result.match === null,
+          [styles.successHighlight]: result.match === 'katakana',
         },
       ]"
     >
@@ -115,8 +110,8 @@ const match = computed(() => {
         styles.cell,
         styles.answer,
         {
-          [styles.errorHighlight]: match === null,
-          [styles.successHighlight]: match !== null,
+          [styles.errorHighlight]: result.match === null,
+          [styles.successHighlight]: result.match !== null,
         },
       ]"
     >

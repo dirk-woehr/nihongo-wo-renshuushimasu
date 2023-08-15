@@ -4,6 +4,7 @@ import styles from "./verb-form-training.module.css";
 import { verbs } from "../../data/verbs";
 import MainButton from "../main-button/main-button.vue";
 import TrainingResult from "./verb-form-training-result.vue";
+import ResultSummary from "../result-summary/result-summary.vue";
 import HelpBox from "./verb-form-help-box.vue";
 import { GameTypes } from "../../domain/gameTypes";
 import { computed, ref } from "vue";
@@ -12,15 +13,10 @@ import { setUpVerbFormGameQueue } from "../../util/setup-verb-form-game-queue";
 import { setVerbFormResult } from "../../util/set-verb-form-result";
 import { getAffirmation } from "../../util/get-affirmation";
 import { verbFormTranslation, verbGroups } from "../../domain/word-types";
-import { getResultToast } from "../../util/get-result-toast";
-
-import { useToast } from "vue-toastification";
 
 const emit = defineEmits<{
   (event: "trainingFinished"): void;
 }>();
-
-const toast = useToast();
 
 const props = defineProps<{ gameType: GameTypes; rounds: number }>();
 
@@ -48,14 +44,6 @@ const setResult = () => {
     results.value,
     answer.value
   );
-
-  const toastContent = getResultToast(
-    verbFormResults[verbFormResults.length - 1]
-  );
-  console.log({ toastContent });
-  toast(toastContent.message, {
-    type: toastContent.type,
-  });
 
   gameQueue.value = verbFormQueue;
   results.value = verbFormResults;
@@ -125,6 +113,7 @@ const displaySourceWord = computed(() => {
     <MainButton text="Next Question" @buttonClicked="setResult" />
   </section>
   <section :class="styles.resultsContainer" v-if="currentQueueItem === null">
+    <ResultSummary :results="results" />
     <TrainingResult
       v-for="(result, index) in results"
       :key="index"
@@ -141,4 +130,3 @@ const displaySourceWord = computed(() => {
     />
   </section>
 </template>
-../../util/set-verb-form-result

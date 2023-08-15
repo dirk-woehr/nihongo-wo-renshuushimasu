@@ -1,11 +1,11 @@
-import { BaseWord, VerbFormKeys } from "../domain/word-types";
+import { BaseWord, BaseWordKeys, VerbFormKeys } from "../domain/word-types";
 
 export const checkResult = (
   baseWord: BaseWord,
   answer: string,
   verbForm: VerbFormKeys,
   affirmation: boolean
-) => {
+): BaseWordKeys | null => {
   const safeCompare = (target: string | null, answer: string) => {
     const trimmedTarget = target?.trim().toLocaleLowerCase();
     const trimmedAnswer = answer.trim().toLocaleLowerCase();

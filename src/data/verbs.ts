@@ -626,7 +626,7 @@ export const verbs: Verb[] = [
           kanji: "掛かれない",
           hiragana: "かかれない",
           katakana: null,
-          romaji: "kakaranai",
+          romaji: "kakarenai",
         },
       },
     },

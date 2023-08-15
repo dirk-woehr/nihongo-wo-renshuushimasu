@@ -15,6 +15,8 @@ export type BaseWord = {
   romaji: string;
 };
 
+export type BaseWordKeys = keyof BaseWord;
+
 export type VerbForm = {
   positive: BaseWord;
   negative: BaseWord;

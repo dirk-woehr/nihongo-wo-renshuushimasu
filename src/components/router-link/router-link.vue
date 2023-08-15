@@ -1,4 +1,3 @@
-// CSS Modules - component class name prefix: RouterLink__
 <script setup lang="ts">
 import { RouteLocationRaw } from "vue-router";
 import styles from "./router-link.module.css";
