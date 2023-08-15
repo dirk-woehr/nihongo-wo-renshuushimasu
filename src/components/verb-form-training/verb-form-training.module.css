@@ -20,7 +20,7 @@
 .kotae {
   font-size: var(--font-size-input);
   height: var(--height-input);
-  width: 100%;
+  width: 100% - calc(var(--padding) * 2);
   background-color: var(--color-input-background);
   border: 2px solid var(--color-button-border);
   border-radius: 5px;

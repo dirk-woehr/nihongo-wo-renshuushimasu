@@ -3,6 +3,186 @@ import { Verb } from "../domain/word-types";
 export const verbs: Verb[] = [
   {
     group: "Group 1",
+    meaning: "spielen",
+    forms: {
+      nonPast: {
+        positive: {
+          kanji: "遊ぶ",
+          hiragana: "あそぶ",
+          katakana: null,
+          romaji: "asobu",
+        },
+        negative: {
+          kanji: "遊ばない",
+          hiragana: "あそばない",
+          katakana: null,
+          romaji: "asobanai",
+        },
+      },
+      nonPastPolite: {
+        positive: {
+          kanji: "遊びます",
+          hiragana: "あそびます",
+          katakana: null,
+          romaji: "asobimasu",
+        },
+        negative: {
+          kanji: "遊びません",
+          hiragana: "あそびません",
+          katakana: null,
+          romaji: "asobimasen",
+        },
+      },
+      pastPolite: {
+        positive: {
+          kanji: "遊びました",
+          hiragana: "あそびました",
+          katakana: null,
+          romaji: "asobimashita",
+        },
+        negative: {
+          kanji: "遊びませんでした",
+          hiragana: "あそびませんでした",
+          katakana: null,
+          romaji: "asobimasendeshita",
+        },
+      },
+      past: {
+        positive: {
+          kanji: "遊んだ",
+          hiragana: "あそんだ",
+          katakana: null,
+          romaji: "asonda",
+        },
+        negative: {
+          kanji: "遊ばなかった",
+          hiragana: "あそばなかった",
+          katakana: null,
+          romaji: "asobanakatta",
+        },
+      },
+      teForm: {
+        positive: {
+          kanji: "遊んで",
+          hiragana: "あそんで",
+          katakana: null,
+          romaji: "asonde",
+        },
+        negative: {
+          kanji: "遊ばなくて",
+          hiragana: "あそばなくて",
+          katakana: null,
+          romaji: "asobanakute",
+        },
+      },
+      potential: {
+        positive: {
+          kanji: "遊べる",
+          hiragana: "あそべる",
+          katakana: null,
+          romaji: "asoberu",
+        },
+        negative: {
+          kanji: "遊べない",
+          hiragana: "あそべない",
+          katakana: null,
+          romaji: "asobenai",
+        },
+      },
+    },
+  },
+  {
+    group: "Group 1",
+    meaning: "treffen",
+    forms: {
+      nonPast: {
+        positive: {
+          kanji: "会う",
+          hiragana: "あう",
+          katakana: null,
+          romaji: "au",
+        },
+        negative: {
+          kanji: "会わない",
+          hiragana: "あわない",
+          katakana: null,
+          romaji: "awanai",
+        },
+      },
+      nonPastPolite: {
+        positive: {
+          kanji: "会います",
+          hiragana: "あいます",
+          katakana: null,
+          romaji: "aimasu",
+        },
+        negative: {
+          kanji: "会いません",
+          hiragana: "あいません",
+          katakana: null,
+          romaji: "aimasen",
+        },
+      },
+      pastPolite: {
+        positive: {
+          kanji: "会いました",
+          hiragana: "あいました",
+          katakana: null,
+          romaji: "aimashita",
+        },
+        negative: {
+          kanji: "会いませんでした",
+          hiragana: "あいませんでした",
+          katakana: null,
+          romaji: "aimasendeshita",
+        },
+      },
+      past: {
+        positive: {
+          kanji: "会った",
+          hiragana: "あった",
+          katakana: null,
+          romaji: "atta",
+        },
+        negative: {
+          kanji: "会わなかった",
+          hiragana: "あわなかった",
+          katakana: null,
+          romaji: "awanakatta",
+        },
+      },
+      teForm: {
+        positive: {
+          kanji: "会って",
+          hiragana: "あって",
+          katakana: null,
+          romaji: "atte",
+        },
+        negative: {
+          kanji: "会わなくて",
+          hiragana: "あわなくて",
+          katakana: null,
+          romaji: "awanakute",
+        },
+      },
+      potential: {
+        positive: {
+          kanji: "会える",
+          hiragana: "あえる",
+          katakana: null,
+          romaji: "aeru",
+        },
+        negative: {
+          kanji: "会えない",
+          hiragana: "あえない",
+          katakana: null,
+          romaji: "aenai",
+        },
+      },
+    },
+  },
+  {
+    group: "Group 1",
     meaning: "sprechen",
     forms: {
       nonPast: {
@@ -273,6 +453,186 @@ export const verbs: Verb[] = [
   },
   {
     group: "Group 1",
+    meaning: "heimkehren",
+    forms: {
+      nonPast: {
+        positive: {
+          kanji: "帰る",
+          hiragana: "かえる",
+          katakana: null,
+          romaji: "kaeru",
+        },
+        negative: {
+          kanji: "帰らない",
+          hiragana: "かえらない",
+          katakana: null,
+          romaji: "kaeranai",
+        },
+      },
+      nonPastPolite: {
+        positive: {
+          kanji: "帰ります",
+          hiragana: "かえります",
+          katakana: null,
+          romaji: "kaerimasu",
+        },
+        negative: {
+          kanji: "帰りません",
+          hiragana: "かえりません",
+          katakana: null,
+          romaji: "kaerimasen",
+        },
+      },
+      pastPolite: {
+        positive: {
+          kanji: "帰りました",
+          hiragana: "かえりました",
+          katakana: null,
+          romaji: "kaerimashita",
+        },
+        negative: {
+          kanji: "帰りませんでした",
+          hiragana: "かえりませんでした",
+          katakana: null,
+          romaji: "kaerimasendeshita",
+        },
+      },
+      past: {
+        positive: {
+          kanji: "帰った",
+          hiragana: "かえった",
+          katakana: null,
+          romaji: "kaetta",
+        },
+        negative: {
+          kanji: "帰らなかった",
+          hiragana: "かえらなかった",
+          katakana: null,
+          romaji: "kaeranakatta",
+        },
+      },
+      teForm: {
+        positive: {
+          kanji: "帰って",
+          hiragana: "かえって",
+          katakana: null,
+          romaji: "kaette",
+        },
+        negative: {
+          kanji: "帰らなくて",
+          hiragana: "かえらなくて",
+          katakana: null,
+          romaji: "kaeranakute",
+        },
+      },
+      potential: {
+        positive: {
+          kanji: "帰れる",
+          hiragana: "かえれる",
+          katakana: null,
+          romaji: "kaereru",
+        },
+        negative: {
+          kanji: "帰れない",
+          hiragana: "かえれない",
+          katakana: null,
+          romaji: "kaerenai",
+        },
+      },
+    },
+  },
+  {
+    group: "Group 1",
+    meaning: "nehmen (Geld, Zeit)",
+    forms: {
+      nonPast: {
+        positive: {
+          kanji: "掛かる",
+          hiragana: "かかる",
+          katakana: null,
+          romaji: "kakaru",
+        },
+        negative: {
+          kanji: "掛からない",
+          hiragana: "かからない",
+          katakana: null,
+          romaji: "kakaranai",
+        },
+      },
+      nonPastPolite: {
+        positive: {
+          kanji: "掛かります",
+          hiragana: "かかります",
+          katakana: null,
+          romaji: "kakarimasu",
+        },
+        negative: {
+          kanji: "掛かりません",
+          hiragana: "かかりません",
+          katakana: null,
+          romaji: "kakarimasen",
+        },
+      },
+      pastPolite: {
+        positive: {
+          kanji: "掛かりました",
+          hiragana: "かかりました",
+          katakana: null,
+          romaji: "kakarimashita",
+        },
+        negative: {
+          kanji: "掛かりませんでした",
+          hiragana: "かかりませんでした",
+          katakana: null,
+          romaji: "kakarimasendeshita",
+        },
+      },
+      past: {
+        positive: {
+          kanji: "掛かった",
+          hiragana: "かかった",
+          katakana: null,
+          romaji: "kakatta",
+        },
+        negative: {
+          kanji: "掛からなかった",
+          hiragana: "かからなかった",
+          katakana: null,
+          romaji: "kakaranakatta",
+        },
+      },
+      teForm: {
+        positive: {
+          kanji: "掛かって",
+          hiragana: "かかって",
+          katakana: null,
+          romaji: "kakatte",
+        },
+        negative: {
+          kanji: "掛からなくて",
+          hiragana: "かからなくて",
+          katakana: null,
+          romaji: "kakaranakute",
+        },
+      },
+      potential: {
+        positive: {
+          kanji: "掛かれる",
+          hiragana: "かかれる",
+          katakana: null,
+          romaji: "kakareru",
+        },
+        negative: {
+          kanji: "掛かれない",
+          hiragana: "かかれない",
+          katakana: null,
+          romaji: "kakaranai",
+        },
+      },
+    },
+  },
+  {
+    group: "Group 1",
     meaning: "schreiben",
     forms: {
       nonPast: {
@@ -453,6 +813,96 @@ export const verbs: Verb[] = [
   },
   {
     group: "Group 1",
+    meaning: "ausschalten/löschen",
+    forms: {
+      nonPast: {
+        positive: {
+          kanji: "消す",
+          hiragana: "けす",
+          katakana: null,
+          romaji: "kesu",
+        },
+        negative: {
+          kanji: "消さない",
+          hiragana: "けさない",
+          katakana: null,
+          romaji: "kesanai",
+        },
+      },
+      nonPastPolite: {
+        positive: {
+          kanji: "消します",
+          hiragana: "けします",
+          katakana: null,
+          romaji: "keshimasu",
+        },
+        negative: {
+          kanji: "消しません",
+          hiragana: "けしません",
+          katakana: null,
+          romaji: "keshimasen",
+        },
+      },
+      pastPolite: {
+        positive: {
+          kanji: "消しました",
+          hiragana: "けしました",
+          katakana: null,
+          romaji: "keshimashita",
+        },
+        negative: {
+          kanji: "消しませんでした",
+          hiragana: "けしませんでした",
+          katakana: null,
+          romaji: "keshimasendeshita",
+        },
+      },
+      past: {
+        positive: {
+          kanji: "消した",
+          hiragana: "けした",
+          katakana: null,
+          romaji: "keshita",
+        },
+        negative: {
+          kanji: "消さなかった",
+          hiragana: "けさなかった",
+          katakana: null,
+          romaji: "kesanakatta",
+        },
+      },
+      teForm: {
+        positive: {
+          kanji: "消して",
+          hiragana: "けして",
+          katakana: null,
+          romaji: "keshite",
+        },
+        negative: {
+          kanji: "消さなくて",
+          hiragana: "けさなくて",
+          katakana: null,
+          romaji: "kesanakute",
+        },
+      },
+      potential: {
+        positive: {
+          kanji: "消せる",
+          hiragana: "けせる",
+          katakana: null,
+          romaji: "keseru",
+        },
+        negative: {
+          kanji: "消せない",
+          hiragana: "けせない",
+          katakana: null,
+          romaji: "kesenai",
+        },
+      },
+    },
+  },
+  {
+    group: "Group 1",
     meaning: "hören",
     forms: {
       nonPast: {
@@ -537,6 +987,276 @@ export const verbs: Verb[] = [
           hiragana: "きけない",
           katakana: null,
           romaji: "kikenai",
+        },
+      },
+    },
+  },
+  {
+    group: "Group 1",
+    meaning: "warten",
+    forms: {
+      nonPast: {
+        positive: {
+          kanji: "待つ",
+          hiragana: "まつ",
+          katakana: null,
+          romaji: "matsu",
+        },
+        negative: {
+          kanji: "待たない",
+          hiragana: "またない",
+          katakana: null,
+          romaji: "matanai",
+        },
+      },
+      nonPastPolite: {
+        positive: {
+          kanji: "待ちます",
+          hiragana: "まちます",
+          katakana: null,
+          romaji: "machimasu",
+        },
+        negative: {
+          kanji: "待ちません",
+          hiragana: "まちません",
+          katakana: null,
+          romaji: "machimasen",
+        },
+      },
+      pastPolite: {
+        positive: {
+          kanji: "待ちました",
+          hiragana: "まちました",
+          katakana: null,
+          romaji: "machimashita",
+        },
+        negative: {
+          kanji: "待ちませんでした",
+          hiragana: "まちませんでした",
+          katakana: null,
+          romaji: "machimasendeshita",
+        },
+      },
+      past: {
+        positive: {
+          kanji: "待った",
+          hiragana: "まった",
+          katakana: null,
+          romaji: "matta",
+        },
+        negative: {
+          kanji: "待たなかった",
+          hiragana: "またなかった",
+          katakana: null,
+          romaji: "matanakatta",
+        },
+      },
+      teForm: {
+        positive: {
+          kanji: "待って",
+          hiragana: "まって",
+          katakana: null,
+          romaji: "matte",
+        },
+        negative: {
+          kanji: "待たなくて",
+          hiragana: "またなくて",
+          katakana: null,
+          romaji: "matanakakute",
+        },
+      },
+      potential: {
+        positive: {
+          kanji: "待てる",
+          hiragana: "まてる",
+          katakana: null,
+          romaji: "materu",
+        },
+        negative: {
+          kanji: "待てない",
+          hiragana: "まてない",
+          katakana: null,
+          romaji: "matenai",
+        },
+      },
+    },
+  },
+  {
+    group: "Group 1",
+    meaning: "halten / besitzen",
+    forms: {
+      nonPast: {
+        positive: {
+          kanji: "持つ",
+          hiragana: "もつ",
+          katakana: null,
+          romaji: "motsu",
+        },
+        negative: {
+          kanji: "持たない",
+          hiragana: "もたない",
+          katakana: null,
+          romaji: "motanai",
+        },
+      },
+      nonPastPolite: {
+        positive: {
+          kanji: "持ちます",
+          hiragana: "もちます",
+          katakana: null,
+          romaji: "mochimasu",
+        },
+        negative: {
+          kanji: "持ちません",
+          hiragana: "もちません",
+          katakana: null,
+          romaji: "mochimasen",
+        },
+      },
+      pastPolite: {
+        positive: {
+          kanji: "持ちました",
+          hiragana: "もちました",
+          katakana: null,
+          romaji: "mochimashita",
+        },
+        negative: {
+          kanji: "持ちませんでした",
+          hiragana: "もちませんでした",
+          katakana: null,
+          romaji: "mochimasendeshita",
+        },
+      },
+      past: {
+        positive: {
+          kanji: "持った",
+          hiragana: "もった",
+          katakana: null,
+          romaji: "motta",
+        },
+        negative: {
+          kanji: "持たなかった",
+          hiragana: "もたなかった",
+          katakana: null,
+          romaji: "motanakatta",
+        },
+      },
+      teForm: {
+        positive: {
+          kanji: "持って",
+          hiragana: "もって",
+          katakana: null,
+          romaji: "motte",
+        },
+        negative: {
+          kanji: "持たなくて",
+          hiragana: "もたなくて",
+          katakana: null,
+          romaji: "motanakute",
+        },
+      },
+      potential: {
+        positive: {
+          kanji: "持てる",
+          hiragana: "もてる",
+          katakana: null,
+          romaji: "moteru",
+        },
+        negative: {
+          kanji: "持てない",
+          hiragana: "もてない",
+          katakana: null,
+          romaji: "motenai",
+        },
+      },
+    },
+  },
+  {
+    group: "Group 1",
+    meaning: "lernen",
+    forms: {
+      nonPast: {
+        positive: {
+          kanji: "習う",
+          hiragana: "ならう",
+          katakana: null,
+          romaji: "narau",
+        },
+        negative: {
+          kanji: "習わない",
+          hiragana: "ならわない",
+          katakana: null,
+          romaji: "narawanai",
+        },
+      },
+      nonPastPolite: {
+        positive: {
+          kanji: "習います",
+          hiragana: "ならいます",
+          katakana: null,
+          romaji: "naraimasu",
+        },
+        negative: {
+          kanji: "習いません",
+          hiragana: "ならいません",
+          katakana: null,
+          romaji: "naraimasen",
+        },
+      },
+      pastPolite: {
+        positive: {
+          kanji: "習いました",
+          hiragana: "ならいました",
+          katakana: null,
+          romaji: "naraimashita",
+        },
+        negative: {
+          kanji: "習いませんでした",
+          hiragana: "ならいませんでした",
+          katakana: null,
+          romaji: "naraimasendeshita",
+        },
+      },
+      past: {
+        positive: {
+          kanji: "習った",
+          hiragana: "ならった",
+          katakana: null,
+          romaji: "naratta",
+        },
+        negative: {
+          kanji: "習わなかった",
+          hiragana: "ならわなかった",
+          katakana: null,
+          romaji: "narawanakatta",
+        },
+      },
+      teForm: {
+        positive: {
+          kanji: "習って",
+          hiragana: "ならって",
+          katakana: null,
+          romaji: "naratte",
+        },
+        negative: {
+          kanji: "習わなくて",
+          hiragana: "ならわなくて",
+          katakana: null,
+          romaji: "narawanakute",
+        },
+      },
+      potential: {
+        positive: {
+          kanji: "習える",
+          hiragana: "ならえる",
+          katakana: null,
+          romaji: "naraeru",
+        },
+        negative: {
+          kanji: "習えない",
+          hiragana: "ならえない",
+          katakana: null,
+          romaji: "naraernai",
         },
       },
     },
@@ -903,6 +1623,96 @@ export const verbs: Verb[] = [
   },
   {
     group: "Group 1",
+    meaning: "nehmen",
+    forms: {
+      nonPast: {
+        positive: {
+          kanji: "取る",
+          hiragana: "とる",
+          katakana: null,
+          romaji: "toru",
+        },
+        negative: {
+          kanji: "取らない",
+          hiragana: "とらない",
+          katakana: null,
+          romaji: "toranai",
+        },
+      },
+      nonPastPolite: {
+        positive: {
+          kanji: "取ります",
+          hiragana: "とります",
+          katakana: null,
+          romaji: "torimasu",
+        },
+        negative: {
+          kanji: "取りません",
+          hiragana: "とりません",
+          katakana: null,
+          romaji: "torimasen",
+        },
+      },
+      pastPolite: {
+        positive: {
+          kanji: "取りました",
+          hiragana: "とりました",
+          katakana: null,
+          romaji: "torimashita",
+        },
+        negative: {
+          kanji: "取りませんでした",
+          hiragana: "とりませんでした",
+          katakana: null,
+          romaji: "torimasendeshita",
+        },
+      },
+      past: {
+        positive: {
+          kanji: "取った",
+          hiragana: "とった",
+          katakana: null,
+          romaji: "totta",
+        },
+        negative: {
+          kanji: "取らなかった",
+          hiragana: "とらなかった",
+          katakana: null,
+          romaji: "toranakatta",
+        },
+      },
+      teForm: {
+        positive: {
+          kanji: "取って",
+          hiragana: "とって",
+          katakana: null,
+          romaji: "totte",
+        },
+        negative: {
+          kanji: "取らなくて",
+          hiragana: "とらなくて",
+          katakana: null,
+          romaji: "toranakute",
+        },
+      },
+      potential: {
+        positive: {
+          kanji: "取れる",
+          hiragana: "とれる",
+          katakana: null,
+          romaji: "toreru",
+        },
+        negative: {
+          kanji: "取れない",
+          hiragana: "とれない",
+          katakana: null,
+          romaji: "torenai",
+        },
+      },
+    },
+  },
+  {
+    group: "Group 1",
     meaning: "verwenden",
     forms: {
       nonPast: {
@@ -1077,6 +1887,276 @@ export const verbs: Verb[] = [
           hiragana: "うたえない",
           katakana: null,
           romaji: "utaenai",
+        },
+      },
+    },
+  },
+  {
+    group: "Group 1",
+    meaning: "ruhen",
+    forms: {
+      nonPast: {
+        positive: {
+          kanji: "休む",
+          hiragana: "やすむ",
+          katakana: null,
+          romaji: "yasumu",
+        },
+        negative: {
+          kanji: "休まない",
+          hiragana: "やすまない",
+          katakana: null,
+          romaji: "yasumanai",
+        },
+      },
+      nonPastPolite: {
+        positive: {
+          kanji: "休みます",
+          hiragana: "やすみます",
+          katakana: null,
+          romaji: "yasumimasu",
+        },
+        negative: {
+          kanji: "休みません",
+          hiragana: "やすみません",
+          katakana: null,
+          romaji: "yasumimasen",
+        },
+      },
+      pastPolite: {
+        positive: {
+          kanji: "休みました",
+          hiragana: "やすみました",
+          katakana: null,
+          romaji: "yasumimashita",
+        },
+        negative: {
+          kanji: "休みませんでした",
+          hiragana: "やすみませんでした",
+          katakana: null,
+          romaji: "yasumimasendeshita",
+        },
+      },
+      past: {
+        positive: {
+          kanji: "休んだ",
+          hiragana: "やすんだ",
+          katakana: null,
+          romaji: "yasunda",
+        },
+        negative: {
+          kanji: "休まなかった",
+          hiragana: "やすまなかった",
+          katakana: null,
+          romaji: "yasumanakatta",
+        },
+      },
+      teForm: {
+        positive: {
+          kanji: "休んで",
+          hiragana: "やすんで",
+          katakana: null,
+          romaji: "yasunde",
+        },
+        negative: {
+          kanji: "休まなくて",
+          hiragana: "やすまなくて",
+          katakana: null,
+          romaji: "yasumanakatta",
+        },
+      },
+      potential: {
+        positive: {
+          kanji: "休める",
+          hiragana: "やすめる",
+          katakana: null,
+          romaji: "yasumeru",
+        },
+        negative: {
+          kanji: "休めない",
+          hiragana: "やすめない",
+          katakana: null,
+          romaji: "yasumenai",
+        },
+      },
+    },
+  },
+  {
+    group: "Group 1",
+    meaning: "rufen",
+    forms: {
+      nonPast: {
+        positive: {
+          kanji: "呼ぶ",
+          hiragana: "よぶ",
+          katakana: null,
+          romaji: "yobu",
+        },
+        negative: {
+          kanji: "呼ばない",
+          hiragana: "よばない",
+          katakana: null,
+          romaji: "yobanai",
+        },
+      },
+      nonPastPolite: {
+        positive: {
+          kanji: "呼びます",
+          hiragana: "よびます",
+          katakana: null,
+          romaji: "yobimasu",
+        },
+        negative: {
+          kanji: "呼びません",
+          hiragana: "よびません",
+          katakana: null,
+          romaji: "yobimasen",
+        },
+      },
+      pastPolite: {
+        positive: {
+          kanji: "呼びました",
+          hiragana: "よびました",
+          katakana: null,
+          romaji: "yobimashita",
+        },
+        negative: {
+          kanji: "呼びませんでした",
+          hiragana: "よびませんでした",
+          katakana: null,
+          romaji: "yobimasendeshita",
+        },
+      },
+      past: {
+        positive: {
+          kanji: "呼んだ",
+          hiragana: "よんだ",
+          katakana: null,
+          romaji: "yonda",
+        },
+        negative: {
+          kanji: "呼ばなかった",
+          hiragana: "よばなかった",
+          katakana: null,
+          romaji: "yobanakatta",
+        },
+      },
+      teForm: {
+        positive: {
+          kanji: "呼んで",
+          hiragana: "よんで",
+          katakana: null,
+          romaji: "yonde",
+        },
+        negative: {
+          kanji: "呼ばなくて",
+          hiragana: "よばなくて",
+          katakana: null,
+          romaji: "yobanakute",
+        },
+      },
+      potential: {
+        positive: {
+          kanji: "呼べる",
+          hiragana: "よべる",
+          katakana: null,
+          romaji: "yoberu",
+        },
+        negative: {
+          kanji: "呼べない",
+          hiragana: "よべない",
+          katakana: null,
+          romaji: "yobenai",
+        },
+      },
+    },
+  },
+  {
+    group: "Group 1",
+    meaning: "lesen",
+    forms: {
+      nonPast: {
+        positive: {
+          kanji: "読む",
+          hiragana: "よむ",
+          katakana: null,
+          romaji: "yomu",
+        },
+        negative: {
+          kanji: "読まない",
+          hiragana: "よまない",
+          katakana: null,
+          romaji: "yomanai",
+        },
+      },
+      nonPastPolite: {
+        positive: {
+          kanji: "読みます",
+          hiragana: "よみます",
+          katakana: null,
+          romaji: "yomimasu",
+        },
+        negative: {
+          kanji: "読みません",
+          hiragana: "よみません",
+          katakana: null,
+          romaji: "yomimasen",
+        },
+      },
+      pastPolite: {
+        positive: {
+          kanji: "読みました",
+          hiragana: "よみました",
+          katakana: null,
+          romaji: "yomimashita",
+        },
+        negative: {
+          kanji: "読みませんでした",
+          hiragana: "よみませんでした",
+          katakana: null,
+          romaji: "yomimasendeshita",
+        },
+      },
+      past: {
+        positive: {
+          kanji: "読んだ",
+          hiragana: "よんだ",
+          katakana: null,
+          romaji: "yonda",
+        },
+        negative: {
+          kanji: "読まなかった",
+          hiragana: "よまなかった",
+          katakana: null,
+          romaji: "yomanakatta",
+        },
+      },
+      teForm: {
+        positive: {
+          kanji: "読んで",
+          hiragana: "よんで",
+          katakana: null,
+          romaji: "yonde",
+        },
+        negative: {
+          kanji: "読まなくて",
+          hiragana: "よまなくて",
+          katakana: null,
+          romaji: "yomanakute",
+        },
+      },
+      potential: {
+        positive: {
+          kanji: "読める",
+          hiragana: "よめる",
+          katakana: null,
+          romaji: "yomeru",
+        },
+        negative: {
+          kanji: "読めない",
+          hiragana: "よめない",
+          katakana: null,
+          romaji: "yomenai",
         },
       },
     },
@@ -1347,6 +2427,96 @@ export const verbs: Verb[] = [
           hiragana: "いられない",
           katakana: null,
           romaji: "irarenai",
+        },
+      },
+    },
+  },
+  {
+    group: "Group 2",
+    meaning: "(aus)leihen",
+    forms: {
+      nonPast: {
+        positive: {
+          kanji: "借る",
+          hiragana: "かる",
+          katakana: null,
+          romaji: "karu",
+        },
+        negative: {
+          kanji: "借らない",
+          hiragana: "からない",
+          katakana: null,
+          romaji: "karanai",
+        },
+      },
+      nonPastPolite: {
+        positive: {
+          kanji: "借ります",
+          hiragana: "かります",
+          katakana: null,
+          romaji: "karimasu",
+        },
+        negative: {
+          kanji: "借りません",
+          hiragana: "かりません",
+          katakana: null,
+          romaji: "karimasen",
+        },
+      },
+      pastPolite: {
+        positive: {
+          kanji: "借りました",
+          hiragana: "かりました",
+          katakana: null,
+          romaji: "karimashita",
+        },
+        negative: {
+          kanji: "借りませんでした",
+          hiragana: "かりませんでした",
+          katakana: null,
+          romaji: "karimasendeshita",
+        },
+      },
+      past: {
+        positive: {
+          kanji: "借った",
+          hiragana: "かった",
+          katakana: null,
+          romaji: "katta",
+        },
+        negative: {
+          kanji: "借らなかった",
+          hiragana: "からなかった",
+          katakana: null,
+          romaji: "karanakatta",
+        },
+      },
+      teForm: {
+        positive: {
+          kanji: "借って",
+          hiragana: "かって",
+          katakana: null,
+          romaji: "katte",
+        },
+        negative: {
+          kanji: "借らなくて",
+          hiragana: "からなくて",
+          katakana: null,
+          romaji: "karanakute",
+        },
+      },
+      potential: {
+        positive: {
+          kanji: "借れる",
+          hiragana: "かれる",
+          katakana: null,
+          romaji: "kareru",
+        },
+        negative: {
+          kanji: "借れない",
+          hiragana: "かれない",
+          katakana: null,
+          romaji: "karenai",
         },
       },
     },

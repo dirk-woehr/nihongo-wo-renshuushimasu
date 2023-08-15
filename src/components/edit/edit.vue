@@ -19,11 +19,39 @@ import { sortyByGroupAndRomaji } from "../../util/sort-verbs-by-group-and-romaji
 
 const verbs = ref(sortyByGroupAndRomaji(rawVerbs));
 const verbIndex = ref(0);
+const sourceKanj = ref("");
+const targetHiragana = ref("");
 const showList = ref(false);
 
 const addNewVerb = () => {
   verbs.value = [...verbs.value, { ...JSON.parse(JSON.stringify(newVerb)) }];
   verbIndex.value = verbs.value.length - 1;
+};
+
+const replaceKanji = () => {
+  if (sourceKanj.value.length * targetHiragana.value.length > 0) {
+    const verb = JSON.parse(
+      JSON.stringify(verbs.value[verbIndex.value])
+    ) as Verb;
+    jishoOrder.forEach((key) => {
+      verb.forms[key].positive.hiragana =
+        verb.forms[key].positive.kanji?.replace(
+          sourceKanj.value,
+          targetHiragana.value
+        ) ?? null;
+      verb.forms[key].negative.hiragana =
+        verb.forms[key].negative.kanji?.replace(
+          sourceKanj.value,
+          targetHiragana.value
+        ) ?? null;
+    });
+    const newVerbs = JSON.parse(JSON.stringify(verbs.value)) as Verb[];
+    newVerbs[verbIndex.value] = verb;
+
+    verbs.value = newVerbs;
+  }
+  sourceKanj.value = "";
+  targetHiragana.value = "";
 };
 
 const getBaseWord = (baseWord: BaseWord): BaseWord => {
@@ -143,118 +171,139 @@ const copyVerbList = () => {
           </tr>
         </table>
       </div>
-      <form>
-        <table :class="styles.editTable">
-          <tr>
-            <th>Group / Meaning</th>
-            <td>
-              <select name="group" id="group" v-model="verbs[verbIndex].group">
-                <option
-                  v-for="(key, index) in verbGroups"
-                  :value="key"
-                  :selected="verbs[verbIndex].group === key"
-                  :key="index"
+      <div>
+        <form>
+          <table :class="styles.editTable">
+            <tr>
+              <th>Group / Meaning</th>
+              <td>
+                <select
+                  name="group"
+                  id="group"
+                  v-model="verbs[verbIndex].group"
                 >
-                  {{ key }}
-                </option>
-              </select>
-            </td>
-            <td>
-              <input
-                type="text"
-                name="meaning"
-                id="meaning"
-                v-model="verbs[verbIndex].meaning"
-              />
-            </td>
-            <td></td>
-            <td></td>
-          </tr>
-          <tr>
-            <th>Form</th>
-            <th>Kanji</th>
-            <th>Hirgana</th>
-            <th>Romaji</th>
-            <th>Katakana</th>
-          </tr>
-          <template v-for="formKey in jishoOrder" :key="formKey">
-            <tr>
-              <th :class="styles.editTableHead">
-                {{ verbFormTranslation(formKey) }} Positive
-              </th>
-              <td>
-                <input
-                  type="text"
-                  :name="formKey + 'Positive' + 'Kanji'"
-                  :id="formKey + 'Positive' + 'Kanji'"
-                  v-model="verbs[verbIndex].forms[formKey].positive.kanji"
-                />
+                  <option
+                    v-for="(key, index) in verbGroups"
+                    :value="key"
+                    :selected="verbs[verbIndex].group === key"
+                    :key="index"
+                  >
+                    {{ key }}
+                  </option>
+                </select>
               </td>
               <td>
                 <input
                   type="text"
-                  :name="formKey + 'Positive' + 'Hiragana'"
-                  :id="formKey + 'Positive' + 'Hiragana'"
-                  v-model="verbs[verbIndex].forms[formKey].positive.hiragana"
+                  name="meaning"
+                  id="meaning"
+                  v-model="verbs[verbIndex].meaning"
                 />
               </td>
-              <td>
-                <input
-                  type="text"
-                  :name="formKey + 'Positive' + 'Romaji'"
-                  :id="formKey + 'Positive' + 'Romaji'"
-                  v-model="verbs[verbIndex].forms[formKey].positive.romaji"
-                />
-              </td>
-              <td>
-                <input
-                  type="text"
-                  :name="formKey + 'Positive' + 'Katakana'"
-                  :id="formKey + 'Positive' + 'Katakana'"
-                  v-model="verbs[verbIndex].forms[formKey].positive.katakana"
-                />
-              </td>
+              <td></td>
+              <td></td>
             </tr>
             <tr>
-              <th :class="styles.editTableHead">
-                {{ verbFormTranslation(formKey) }} Negative
-              </th>
-              <td>
-                <input
-                  type="text"
-                  :name="formKey + 'Negative' + 'Kanji'"
-                  :id="formKey + 'Negative' + 'Kanji'"
-                  v-model="verbs[verbIndex].forms[formKey].negative.kanji"
-                />
-              </td>
-              <td>
-                <input
-                  type="text"
-                  :name="formKey + 'Negative' + 'Hiragana'"
-                  :id="formKey + 'Negative' + 'Hiragana'"
-                  v-model="verbs[verbIndex].forms[formKey].negative.hiragana"
-                />
-              </td>
-              <td>
-                <input
-                  type="text"
-                  :name="formKey + 'Negative' + 'Romaji'"
-                  :id="formKey + 'Negative' + 'Romaji'"
-                  v-model="verbs[verbIndex].forms[formKey].negative.romaji"
-                />
-              </td>
-              <td>
-                <input
-                  type="text"
-                  :name="formKey + 'Negative' + 'Katakana'"
-                  :id="formKey + 'Negative' + 'Katakana'"
-                  v-model="verbs[verbIndex].forms[formKey].negative.katakana"
-                />
-              </td>
+              <th>Form</th>
+              <th>Kanji</th>
+              <th>Hirgana</th>
+              <th>Romaji</th>
+              <th>Katakana</th>
             </tr>
-          </template>
-        </table>
-      </form>
+            <template v-for="formKey in jishoOrder" :key="formKey">
+              <tr>
+                <th :class="styles.editTableHead">
+                  {{ verbFormTranslation(formKey) }} Positive
+                </th>
+                <td>
+                  <input
+                    type="text"
+                    :name="formKey + 'Positive' + 'Kanji'"
+                    :id="formKey + 'Positive' + 'Kanji'"
+                    v-model="verbs[verbIndex].forms[formKey].positive.kanji"
+                  />
+                </td>
+                <td>
+                  <input
+                    type="text"
+                    :name="formKey + 'Positive' + 'Hiragana'"
+                    :id="formKey + 'Positive' + 'Hiragana'"
+                    v-model="verbs[verbIndex].forms[formKey].positive.hiragana"
+                  />
+                </td>
+                <td>
+                  <input
+                    type="text"
+                    :name="formKey + 'Positive' + 'Romaji'"
+                    :id="formKey + 'Positive' + 'Romaji'"
+                    v-model="verbs[verbIndex].forms[formKey].positive.romaji"
+                  />
+                </td>
+                <td>
+                  <input
+                    type="text"
+                    :name="formKey + 'Positive' + 'Katakana'"
+                    :id="formKey + 'Positive' + 'Katakana'"
+                    v-model="verbs[verbIndex].forms[formKey].positive.katakana"
+                  />
+                </td>
+              </tr>
+              <tr>
+                <th :class="styles.editTableHead">
+                  {{ verbFormTranslation(formKey) }} Negative
+                </th>
+                <td>
+                  <input
+                    type="text"
+                    :name="formKey + 'Negative' + 'Kanji'"
+                    :id="formKey + 'Negative' + 'Kanji'"
+                    v-model="verbs[verbIndex].forms[formKey].negative.kanji"
+                  />
+                </td>
+                <td>
+                  <input
+                    type="text"
+                    :name="formKey + 'Negative' + 'Hiragana'"
+                    :id="formKey + 'Negative' + 'Hiragana'"
+                    v-model="verbs[verbIndex].forms[formKey].negative.hiragana"
+                  />
+                </td>
+                <td>
+                  <input
+                    type="text"
+                    :name="formKey + 'Negative' + 'Romaji'"
+                    :id="formKey + 'Negative' + 'Romaji'"
+                    v-model="verbs[verbIndex].forms[formKey].negative.romaji"
+                  />
+                </td>
+                <td>
+                  <input
+                    type="text"
+                    :name="formKey + 'Negative' + 'Katakana'"
+                    :id="formKey + 'Negative' + 'Katakana'"
+                    v-model="verbs[verbIndex].forms[formKey].negative.katakana"
+                  />
+                </td>
+              </tr>
+            </template>
+            <tr>
+              <th></th>
+              <td>
+                <input type="text" name="sourceKanj" v-model="sourceKanj" />
+              </td>
+              <td>
+                <input
+                  type="text"
+                  name="targetHiragana"
+                  v-model="targetHiragana"
+                />
+              </td>
+              <td colspan="2"></td>
+            </tr>
+          </table>
+        </form>
+        <MainButton text="Replace Kanj" @buttonClicked="replaceKanji" />
+      </div>
     </div>
   </FeatureContainer>
 </template>
