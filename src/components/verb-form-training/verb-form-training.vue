@@ -98,19 +98,42 @@ const displaySourceWord = computed(() => {
       :group="group"
     />
     <p>{{ gameQueue.length - 1 }} remaining</p>
-    <p>
-      <input
-        :class="styles.kotae"
-        type="text"
-        name="answer"
-        id="answer"
-        autofocus
-        v-model="answer"
-        @keyup.enter="setResult"
-        :placeholder="'Enter ' + translatedVerbForms.target + ' Form'"
-      />
-    </p>
-    <MainButton text="Next Question" @buttonClicked="setResult" />
+    <div :class="[styles.desktop]">
+      <p>
+        <input
+          :class="styles.kotae"
+          type="text"
+          name="answer"
+          id="answer"
+          autofocus
+          v-model="answer"
+          @keyup.enter="setResult"
+          :placeholder="'Enter ' + translatedVerbForms.target + ' Form'"
+        />
+      </p>
+      <MainButton text="Next Question" @buttonClicked="setResult" />
+    </div>
+    <div :class="[styles.mobile]">
+      <div :class="[styles.kotaeMobileContainer]">
+        <input
+          :class="styles.kotaeMobile"
+          type="text"
+          name="answer_small"
+          id="answer_small"
+          autofocus
+          v-model="answer"
+          @keyup.enter="setResult"
+          :placeholder="'Enter ' + translatedVerbForms.target + ' Form'"
+        />
+        <label
+          :class="styles.kotaeMobileButton"
+          for="answer_small"
+          @click="setResult"
+        >
+          <span>↲</span>
+        </label>
+      </div>
+    </div>
   </section>
   <section :class="styles.resultsContainer" v-if="currentQueueItem === null">
     <ResultSummary :results="results" />

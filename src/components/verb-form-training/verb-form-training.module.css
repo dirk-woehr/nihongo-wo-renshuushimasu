@@ -26,10 +26,63 @@
   border-radius: 5px;
   color: var(--color-text-highlight);
   text-align: center;
+  font-family: "Satoshi-Variable", Helvetica, sans-serif;
 }
 
 .resultsContainer {
   display: flex;
   flex-direction: column;
   gap: var(--padding-small);
+}
+
+.desktop {
+  display: none;
+}
+
+.mobile {
+  display: block;
+}
+
+.kotaeMobileContainer {
+  display: flex;
+  border: 2px solid var(--color-button-border);
+  justify-content: center;
+  border-radius: 5px;
+  align-items: stretch;
+  width: 100% - calc(var(--padding) * 2);
+}
+
+.kotaeMobile {
+  height: var(--height-input);
+  background-color: var(--color-input-background);
+  color: var(--color-text-highlight);
+  font-size: var(--font-size-input);
+  text-align: center;
+  border: none;
+  font-family: "Satoshi-Variable", Helvetica, sans-serif;
+  border-radius: 0;
+  width: 227px;
+}
+
+.kotaeMobileButton {
+  background-color: var(--color-button-border);
+  width: var(--height-input);
+  display: flex;
+  font-size: var(--font-size-input);
+  color: var(--color-text-highlight);
+  font-weight: bold;
+  justify-content: center;
+  flex-wrap: wrap;
+  cursor: pointer;
+}
+
+@media (min-width: 800px) {
+  .desktop {
+    display: flex;
+    flex-direction: column;
+    gap: var(--padding-small);
+  }
+  .mobile {
+    display: none;
+  }
 }

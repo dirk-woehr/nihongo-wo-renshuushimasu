@@ -15,5 +15,5 @@ defineProps<{ baseWord: BaseWord; group: VerbGroups }>();
   <p :class="styles.hint" v-if="baseWord.romaji.length > 0">
     {{ baseWord.romaji }}
   </p>
-  <p>{{ group }}</p>
+  <p :class="styles.hint">{{ group }}</p>
 </template>

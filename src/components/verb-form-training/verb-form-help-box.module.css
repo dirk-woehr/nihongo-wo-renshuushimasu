@@ -1,3 +1,12 @@
 .hint {
   text-align: center;
+  padding: 0px;
+  margin: 0px;
+}
+
+@media (min-width: 800px) {
+  .hint {
+    display: flex;
+    margin-bottom: var(--padding-small);
+  }
 }

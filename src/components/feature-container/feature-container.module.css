@@ -7,12 +7,17 @@
 }
 
 .selectContainer {
-  place-self: center;
   padding: var(--padding);
   gap: var(--padding-small);
-  border: 2px solid var(--color-text-highlight);
   border-radius: var(--padding);
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
+}
+
+@media (min-width: 800px) {
+  .selectContainer {
+    place-self: center;
+    border: 2px solid var(--color-text-highlight);
+  }
 }
