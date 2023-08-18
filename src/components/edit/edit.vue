@@ -5,6 +5,7 @@ import { computed, ref } from "vue";
 import { verbs as rawVerbs } from "../../data/verbs";
 import { newVerb } from "../../data/newVerb";
 import FeatureContainer from "../feature-container/feature-container.vue";
+import EditList from "./edit-list.vue";
 import MainButton from "../main-button/main-button.vue";
 import RouterLink from "../router-link/router-link.vue";
 import {
@@ -26,6 +27,10 @@ const showList = ref(false);
 const addNewVerb = () => {
   verbs.value = [...verbs.value, { ...JSON.parse(JSON.stringify(newVerb)) }];
   verbIndex.value = verbs.value.length - 1;
+};
+
+const setVerbIndex = (index: number) => {
+  verbIndex.value = index;
 };
 
 const replaceKanji = () => {
@@ -147,29 +152,12 @@ const copyVerbList = () => {
         <button @click="showList = !showList" :class="styles.toggleList">
           {{ showList ? "Hide" : "Show" }} List
         </button>
-        <table :class="styles.verbList" v-if="showList">
-          <tr :class="[{ [styles.listRowHead]: true }]">
-            <th>Kanji</th>
-            <th>Hiragana</th>
-            <th>Romaji</th>
-            <th>Group</th>
-          </tr>
-          <tr
-            v-for="(verb, index) in verbs"
-            :key="index"
-            @click="verbIndex = index"
-            :class="[
-              { [styles.active]: index === verbIndex },
-              { [styles.listRow]: true },
-            ]"
-            class="listRow"
-          >
-            <td>{{ verb.forms.nonPast.positive.kanji }}</td>
-            <td>{{ verb.forms.nonPast.positive.hiragana }}</td>
-            <td>{{ verb.forms.nonPast.positive.romaji }}</td>
-            <td>{{ verb.group }}</td>
-          </tr>
-        </table>
+        <EditList
+          v-if="showList"
+          :verbs="verbs"
+          :verbIndex="verbIndex"
+          @verbSelected="setVerbIndex"
+        />
       </div>
       <div>
         <form>

@@ -13,25 +13,6 @@
   padding-left: 6px;
 }
 
-.listRow:hover {
-  background-color: darkslategray;
-}
-
-.listRow.active {
-  background-color: darkslateblue;
-}
-
-.listRow > td,
-.listRowHead > th {
-  padding: 3px;
-  white-space: nowrap;
-  min-width: 100px;
-}
-
-.listRowHead {
-  background-color: darkred;
-}
-
 .editTableHead {
   white-space: nowrap;
 }

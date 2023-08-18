@@ -1,5 +1,4 @@
 .mainSelection {
-  height: var(--height-fullscreen);
   width: var(--width-fullscreen);
   background-color: black;
   display: grid;
@@ -19,5 +18,8 @@
   .selectContainer {
     place-self: center;
     border: 2px solid var(--color-text-highlight);
+  }
+  .mainSelection {
+    height: var(--height-fullscreen);
   }
 }
