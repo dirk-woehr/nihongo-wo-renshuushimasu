@@ -1,4 +1,3 @@
-// CSS Modules - component class name prefix: Home__
 <script setup lang="ts">
 import styles from "./home.module.css";
 import FeatureContainer from "../feature-container/feature-container.vue";

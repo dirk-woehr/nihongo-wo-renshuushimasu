@@ -6,6 +6,7 @@ import MainButton from "../main-button/main-button.vue";
 import TrainingResult from "./verb-form-training-result.vue";
 import ResultSummary from "../result-summary/result-summary.vue";
 import HelpBox from "./verb-form-help-box.vue";
+import Furigana from "../furigana/furigana.vue";
 import { GameTypes } from "../../domain/gameTypes";
 import { computed, ref } from "vue";
 import { GameItem, GameResult } from "../../domain/queues";
@@ -75,21 +76,17 @@ const currentNonPastPositive = computed(() => {
   if (currentQueueItem.value === null) return "";
   return verbs[currentQueueItem.value.verbIndex].forms.nonPast.positive.romaji;
 });
-
-const displaySourceWord = computed(() => {
-  if (currentQueueItem.value === null || baseWord.value === null) return "";
-
-  if (baseWord.value.kanji !== null) return baseWord.value.kanji;
-  if (baseWord.value.hiragana !== null) return baseWord.value.hiragana;
-  if (baseWord.value.katakana !== null) return baseWord.value.katakana;
-  return baseWord.value.romaji;
-});
 </script>
 
 <template>
   <section :class="styles.container" v-if="currentQueueItem !== null">
     <p :class="styles.mondai">
-      {{ displaySourceWord }} <span :class="styles.arrow">⇒</span>
+      <Furigana
+        :key="baseWord?.romaji ?? '_none_'"
+        :kanji="baseWord?.kanji ?? baseWord?.hiragana ?? baseWord?.romaji ?? ''"
+        :hiragana="baseWord?.hiragana ?? baseWord?.romaji ?? ''"
+      ></Furigana>
+      <span :class="styles.arrow">⇒</span>
       {{ translatedVerbForms.target }}
     </p>
     <MainButton

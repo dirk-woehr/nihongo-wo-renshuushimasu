@@ -6123,6 +6123,96 @@ export const verbs: Verb[] = [
   },
   {
     group: "Group 1",
+    meaning: "verkaufen",
+    forms: {
+      nonPast: {
+        positive: {
+          kanji: "売る",
+          hiragana: "売る",
+          katakana: null,
+          romaji: "uru",
+        },
+        negative: {
+          kanji: "売らない",
+          hiragana: "売らない",
+          katakana: null,
+          romaji: "uranai",
+        },
+      },
+      nonPastPolite: {
+        positive: {
+          kanji: "売ります",
+          hiragana: "売ります",
+          katakana: null,
+          romaji: "urimasu",
+        },
+        negative: {
+          kanji: "売りません",
+          hiragana: "売りません",
+          katakana: null,
+          romaji: "urimasen",
+        },
+      },
+      pastPolite: {
+        positive: {
+          kanji: "売りました",
+          hiragana: "売りました",
+          katakana: null,
+          romaji: "urimashita",
+        },
+        negative: {
+          kanji: "売りませんでした",
+          hiragana: "売りませんでした",
+          katakana: null,
+          romaji: "urimasendeshita",
+        },
+      },
+      past: {
+        positive: {
+          kanji: "売った",
+          hiragana: "売った",
+          katakana: null,
+          romaji: "utta",
+        },
+        negative: {
+          kanji: "売らなかった",
+          hiragana: "売らなかった",
+          katakana: null,
+          romaji: "uranakatta",
+        },
+      },
+      teForm: {
+        positive: {
+          kanji: "売って",
+          hiragana: "売って",
+          katakana: null,
+          romaji: "utte",
+        },
+        negative: {
+          kanji: "売らなくて",
+          hiragana: "売らなくて",
+          katakana: null,
+          romaji: "uranakute",
+        },
+      },
+      potential: {
+        positive: {
+          kanji: "売れる",
+          hiragana: "売れる",
+          katakana: null,
+          romaji: "ureru",
+        },
+        negative: {
+          kanji: "売れない",
+          hiragana: "売れない",
+          katakana: null,
+          romaji: "urenai",
+        },
+      },
+    },
+  },
+  {
+    group: "Group 1",
     meaning: "singen",
     forms: {
       nonPast: {
@@ -6213,6 +6303,96 @@ export const verbs: Verb[] = [
   },
   {
     group: "Group 1",
+    meaning: "verstehen",
+    forms: {
+      nonPast: {
+        positive: {
+          kanji: "分かる",
+          hiragana: "わかる",
+          katakana: null,
+          romaji: "wakaru",
+        },
+        negative: {
+          kanji: "分からない",
+          hiragana: "わからない",
+          katakana: null,
+          romaji: "wakaranai",
+        },
+      },
+      nonPastPolite: {
+        positive: {
+          kanji: "分かります",
+          hiragana: "わかります",
+          katakana: null,
+          romaji: "wakarimasu",
+        },
+        negative: {
+          kanji: "分かりません",
+          hiragana: "わかりません",
+          katakana: null,
+          romaji: "wakarimasen",
+        },
+      },
+      pastPolite: {
+        positive: {
+          kanji: "分かりました",
+          hiragana: "わかりました",
+          katakana: null,
+          romaji: "wakarimashita",
+        },
+        negative: {
+          kanji: "分かりませんでした",
+          hiragana: "わかりませんでした",
+          katakana: null,
+          romaji: "wakarimasendeshita",
+        },
+      },
+      past: {
+        positive: {
+          kanji: "分かった",
+          hiragana: "わかった",
+          katakana: null,
+          romaji: "wakatta",
+        },
+        negative: {
+          kanji: "分からなかった",
+          hiragana: "わからなかった",
+          katakana: null,
+          romaji: "wakaranakatta",
+        },
+      },
+      teForm: {
+        positive: {
+          kanji: "分かって",
+          hiragana: "わかって",
+          katakana: null,
+          romaji: "wakatte",
+        },
+        negative: {
+          kanji: "分からなくて",
+          hiragana: "わからなくて",
+          katakana: null,
+          romaji: "wakaranakute",
+        },
+      },
+      potential: {
+        positive: {
+          kanji: "分かれる",
+          hiragana: "わかれる",
+          katakana: null,
+          romaji: "wakareru",
+        },
+        negative: {
+          kanji: "分かれない",
+          hiragana: "わかれない",
+          katakana: null,
+          romaji: "wakarenai",
+        },
+      },
+    },
+  },
+  {
+    group: "Group 1",
     meaning: "lachen",
     forms: {
       nonPast: {
@@ -6297,6 +6477,186 @@ export const verbs: Verb[] = [
           hiragana: "わらえない",
           katakana: null,
           romaji: "waraenai",
+        },
+      },
+    },
+  },
+  {
+    group: "Group 1",
+    meaning: "überqueren",
+    forms: {
+      nonPast: {
+        positive: {
+          kanji: "渡す",
+          hiragana: "わたす",
+          katakana: null,
+          romaji: "watasu",
+        },
+        negative: {
+          kanji: "渡さない",
+          hiragana: "わたさない",
+          katakana: null,
+          romaji: "watasanai",
+        },
+      },
+      nonPastPolite: {
+        positive: {
+          kanji: "渡します",
+          hiragana: "わたします",
+          katakana: null,
+          romaji: "watashimasu",
+        },
+        negative: {
+          kanji: "渡しません",
+          hiragana: "わたしません",
+          katakana: null,
+          romaji: "watashimasen",
+        },
+      },
+      pastPolite: {
+        positive: {
+          kanji: "渡しました",
+          hiragana: "わたしました",
+          katakana: null,
+          romaji: "watashimashita",
+        },
+        negative: {
+          kanji: "渡しませんでした",
+          hiragana: "わたしませんでした",
+          katakana: null,
+          romaji: "watashimasendeshita",
+        },
+      },
+      past: {
+        positive: {
+          kanji: "渡した",
+          hiragana: "わたした",
+          katakana: null,
+          romaji: "watashita",
+        },
+        negative: {
+          kanji: "渡さなかった",
+          hiragana: "わたさなかった",
+          katakana: null,
+          romaji: "watasanakatta",
+        },
+      },
+      teForm: {
+        positive: {
+          kanji: "渡して",
+          hiragana: "わたして",
+          katakana: null,
+          romaji: "watashite",
+        },
+        negative: {
+          kanji: "渡さなくて",
+          hiragana: "わたさなくて",
+          katakana: null,
+          romaji: "watasanakute",
+        },
+      },
+      potential: {
+        positive: {
+          kanji: "渡せる",
+          hiragana: "わたせる",
+          katakana: null,
+          romaji: "wataseru",
+        },
+        negative: {
+          kanji: "渡せない",
+          hiragana: "わたせない",
+          katakana: null,
+          romaji: "watasenai",
+        },
+      },
+    },
+  },
+  {
+    group: "Group 1",
+    meaning: "etwas unternehmen",
+    forms: {
+      nonPast: {
+        positive: {
+          kanji: "遣る",
+          hiragana: "やる",
+          katakana: null,
+          romaji: "yaru",
+        },
+        negative: {
+          kanji: "遣らない",
+          hiragana: "やらない",
+          katakana: null,
+          romaji: "yaranai",
+        },
+      },
+      nonPastPolite: {
+        positive: {
+          kanji: "遣ります",
+          hiragana: "やります",
+          katakana: null,
+          romaji: "yarimasu",
+        },
+        negative: {
+          kanji: "遣りません",
+          hiragana: "やりません",
+          katakana: null,
+          romaji: "yarimasen",
+        },
+      },
+      pastPolite: {
+        positive: {
+          kanji: "遣りました",
+          hiragana: "やりました",
+          katakana: null,
+          romaji: "yarimashita",
+        },
+        negative: {
+          kanji: "遣りませんでした",
+          hiragana: "やりませんでした",
+          katakana: null,
+          romaji: "yarimasendeshita",
+        },
+      },
+      past: {
+        positive: {
+          kanji: "遣った",
+          hiragana: "やった",
+          katakana: null,
+          romaji: "yaratte",
+        },
+        negative: {
+          kanji: "遣らなかった",
+          hiragana: "やらなかった",
+          katakana: null,
+          romaji: "yaranakatta",
+        },
+      },
+      teForm: {
+        positive: {
+          kanji: "遣って",
+          hiragana: "やって",
+          katakana: null,
+          romaji: "yatte",
+        },
+        negative: {
+          kanji: "遣らなくて",
+          hiragana: "やらなくて",
+          katakana: null,
+          romaji: "yaranakute",
+        },
+      },
+      potential: {
+        positive: {
+          kanji: "遣れる",
+          hiragana: "やれる",
+          katakana: null,
+          romaji: "yareru",
+        },
+        negative: {
+          kanji: "遣れない",
+          hiragana: "やれない",
+          katakana: null,
+          romaji: "yarenai",
         },
       },
     },
@@ -9087,6 +9447,186 @@ export const verbs: Verb[] = [
           hiragana: "つけられない",
           katakana: null,
           romaji: "tsukerarenai",
+        },
+      },
+    },
+  },
+  {
+    group: "Group 2",
+    meaning: "angestellt sein",
+    forms: {
+      nonPast: {
+        positive: {
+          kanji: "勤める",
+          hiragana: "つとめる",
+          katakana: null,
+          romaji: "tsutomeru",
+        },
+        negative: {
+          kanji: "勤めない",
+          hiragana: "つとめない",
+          katakana: null,
+          romaji: "tsutomenai",
+        },
+      },
+      nonPastPolite: {
+        positive: {
+          kanji: " 勤めます",
+          hiragana: " つとめます",
+          katakana: null,
+          romaji: "tsutomemasu",
+        },
+        negative: {
+          kanji: " 勤めません",
+          hiragana: " つとめません",
+          katakana: null,
+          romaji: "tsutomemasen",
+        },
+      },
+      pastPolite: {
+        positive: {
+          kanji: " 勤めました",
+          hiragana: " つとめました",
+          katakana: null,
+          romaji: "tsutomemashita",
+        },
+        negative: {
+          kanji: " 勤めませんでした",
+          hiragana: " つとめませんでした",
+          katakana: null,
+          romaji: "tsutomemasendeshita",
+        },
+      },
+      past: {
+        positive: {
+          kanji: "勤めた",
+          hiragana: "つとめた",
+          katakana: null,
+          romaji: "tsutometa",
+        },
+        negative: {
+          kanji: "勤めなかった",
+          hiragana: "つとめなかった",
+          katakana: null,
+          romaji: "tsutomenakatta",
+        },
+      },
+      teForm: {
+        positive: {
+          kanji: "勤めて",
+          hiragana: "つとめて",
+          katakana: null,
+          romaji: "tsutomete",
+        },
+        negative: {
+          kanji: "勤めなくて",
+          hiragana: "つとめなくて",
+          katakana: null,
+          romaji: "tsutomenakute",
+        },
+      },
+      potential: {
+        positive: {
+          kanji: "勤められる",
+          hiragana: "つとめられる",
+          katakana: null,
+          romaji: "tsutomerareru",
+        },
+        negative: {
+          kanji: "勤められない",
+          hiragana: "つとめられない",
+          katakana: null,
+          romaji: "tsutomerarenai",
+        },
+      },
+    },
+  },
+  {
+    group: "Group 2",
+    meaning: "geboren werden",
+    forms: {
+      nonPast: {
+        positive: {
+          kanji: "生まれる",
+          hiragana: "うまれる",
+          katakana: null,
+          romaji: "umareru",
+        },
+        negative: {
+          kanji: "生まれない",
+          hiragana: "うまれない",
+          katakana: null,
+          romaji: "umarenai",
+        },
+      },
+      nonPastPolite: {
+        positive: {
+          kanji: "生まれます",
+          hiragana: "うまれます",
+          katakana: null,
+          romaji: "umaremasu",
+        },
+        negative: {
+          kanji: "生まれません",
+          hiragana: "うまれません",
+          katakana: null,
+          romaji: "umaremasen",
+        },
+      },
+      pastPolite: {
+        positive: {
+          kanji: "生まれました",
+          hiragana: "うまれました",
+          katakana: null,
+          romaji: "umaremashita",
+        },
+        negative: {
+          kanji: "生まれませんでした",
+          hiragana: "うまれませんでした",
+          katakana: null,
+          romaji: "umaremasendeshita",
+        },
+      },
+      past: {
+        positive: {
+          kanji: "生まれた",
+          hiragana: "うまれた",
+          katakana: null,
+          romaji: "umareta",
+        },
+        negative: {
+          kanji: "生まれなかった",
+          hiragana: "うまれなかった",
+          katakana: null,
+          romaji: "umarenakatta",
+        },
+      },
+      teForm: {
+        positive: {
+          kanji: "生まれて",
+          hiragana: "うまれて",
+          katakana: null,
+          romaji: "umareta",
+        },
+        negative: {
+          kanji: "生まれなくて",
+          hiragana: "うまれなくて",
+          katakana: null,
+          romaji: "umarenakute",
+        },
+      },
+      potential: {
+        positive: {
+          kanji: "生まれられる",
+          hiragana: "うまれられる",
+          katakana: null,
+          romaji: "umarerareru",
+        },
+        negative: {
+          kanji: "生まれられない",
+          hiragana: "うまれられない",
+          katakana: null,
+          romaji: "umarerarenai",
         },
       },
     },
