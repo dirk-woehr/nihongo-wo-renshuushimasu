@@ -24,3 +24,8 @@ table {
 .toggleList {
   white-space: nowrap;
 }
+
+.utilButtons {
+  display: flex;
+  gap: var(--padding);
+}

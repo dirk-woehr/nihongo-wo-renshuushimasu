@@ -7,12 +7,15 @@ import {
   VerbGroups,
   verbGroups,
 } from "../../domain/word-types";
-import { verbs } from "../../data/verbs";
+
+const props = defineProps<{ verbs: Verb[]; verbIndex: number }>();
+
+type IndexedVerb = Verb & {
+  index: number;
+};
 
 const filterWord = ref<string>("");
 const filterGroup = ref<VerbGroups | string>("");
-
-defineProps<{ verbs: Verb[]; verbIndex: number }>();
 
 const checkGroupMatch = (verbGroup: VerbGroups): boolean => {
   if (filterGroup.value === "") return true;
@@ -32,12 +35,20 @@ const checkWordMatch = (baseWord: BaseWord): boolean => {
   return false;
 };
 
-const filteredVerbs = computed(() => {
-  return verbs.filter((verb) => {
-    return (
-      checkGroupMatch(verb.group) && checkWordMatch(verb.forms.nonPast.positive)
-    );
-  });
+const filteredVerbs = computed<IndexedVerb[]>(() => {
+  return props.verbs
+    .map((verb, index) => {
+      return {
+        ...verb,
+        index,
+      };
+    })
+    .filter((verb) => {
+      return (
+        checkGroupMatch(verb.group) &&
+        checkWordMatch(verb.forms.nonPast.positive)
+      );
+    });
 });
 
 const emit = defineEmits<{
@@ -71,12 +82,17 @@ const emit = defineEmits<{
         </select>
       </th>
     </tr>
+    <tr>
+      <th :class="styles.listRowHead" colspan="4">
+        Showing {{ filteredVerbs.length }} of {{ verbs.length }} verbs
+      </th>
+    </tr>
     <tr
       v-for="(verb, index) in filteredVerbs"
       :key="index"
-      @click="emit('verbSelected', index)"
+      @click="emit('verbSelected', verb.index)"
       :class="[
-        { [styles.active]: index === verbIndex },
+        { [styles.active]: verb.index === verbIndex },
         { [styles.listRow]: true },
       ]"
       class="listRow"

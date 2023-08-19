@@ -17,6 +17,7 @@ import {
   VerbFormKeys,
 } from "../../domain/word-types";
 import { sortyByGroupAndRomaji } from "../../util/sort-verbs-by-group-and-romaji";
+import { fillPoliteForm } from "../../util/fill-polite-form";
 
 const verbs = ref(sortyByGroupAndRomaji(rawVerbs));
 const verbIndex = ref(0);
@@ -57,6 +58,14 @@ const replaceKanji = () => {
   }
   sourceKanj.value = "";
   targetHiragana.value = "";
+};
+
+const setPoliteForm = () => {
+  verbs.value = fillPoliteForm(
+    verbs.value[verbIndex.value],
+    verbs.value,
+    verbIndex.value
+  );
 };
 
 const getBaseWord = (baseWord: BaseWord): BaseWord => {
@@ -290,7 +299,10 @@ const copyVerbList = () => {
             </tr>
           </table>
         </form>
-        <MainButton text="Replace Kanj" @buttonClicked="replaceKanji" />
+        <div :class="styles.utilButtons">
+          <MainButton text="Replace Kanj" @buttonClicked="replaceKanji" />
+          <MainButton text="Fill Polite Form" @buttonClicked="setPoliteForm" />
+        </div>
       </div>
     </div>
   </FeatureContainer>
