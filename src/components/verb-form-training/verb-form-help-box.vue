@@ -2,7 +2,11 @@
 import { BaseWord, VerbGroups } from "../../domain/word-types";
 import styles from "./verb-form-help-box.module.css";
 
-defineProps<{ baseWord: BaseWord; group: VerbGroups }>();
+defineProps<{
+  baseWord: BaseWord;
+  group: VerbGroups;
+  nonPastPositive: string;
+}>();
 </script>
 
 <template>
@@ -16,4 +20,9 @@ defineProps<{ baseWord: BaseWord; group: VerbGroups }>();
     {{ baseWord.romaji }}
   </p>
   <p :class="styles.hint">{{ group }}</p>
+  <p :class="styles.hint">
+    <a :href="'https://jisho.org/search/' + nonPastPositive" target="_blank"
+      >View in Jisho.org</a
+    >
+  </p>
 </template>

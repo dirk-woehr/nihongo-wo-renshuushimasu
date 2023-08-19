@@ -71,6 +71,11 @@ const baseWord = computed(() => {
   ];
 });
 
+const currentNonPastPositive = computed(() => {
+  if (currentQueueItem.value === null) return "";
+  return verbs[currentQueueItem.value.verbIndex].forms.nonPast.positive.romaji;
+});
+
 const displaySourceWord = computed(() => {
   if (currentQueueItem.value === null || baseWord.value === null) return "";
 
@@ -96,6 +101,7 @@ const displaySourceWord = computed(() => {
       v-if="baseWord !== null && showHelp"
       :baseWord="baseWord"
       :group="group"
+      :non-past-positive="currentNonPastPositive"
     />
     <p>{{ gameQueue.length - 1 }} remaining</p>
     <div :class="[styles.desktop]">
