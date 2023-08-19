@@ -4958,13 +4958,13 @@ export const verbs: Verb[] = [
       nonPast: {
         positive: {
           kanji: "住む",
-          hiragana: "住む",
+          hiragana: "すむ",
           katakana: null,
           romaji: "sumu",
         },
         negative: {
           kanji: "住まない",
-          hiragana: "住まない",
+          hiragana: "すまない",
           katakana: null,
           romaji: "sumanai",
         },
@@ -4972,13 +4972,13 @@ export const verbs: Verb[] = [
       nonPastPolite: {
         positive: {
           kanji: "住みます",
-          hiragana: "住みます",
+          hiragana: "すみます",
           katakana: null,
           romaji: "sumimasu",
         },
         negative: {
           kanji: "住みません",
-          hiragana: "住みません",
+          hiragana: "すみません",
           katakana: null,
           romaji: "sumimasen",
         },
@@ -4986,13 +4986,13 @@ export const verbs: Verb[] = [
       pastPolite: {
         positive: {
           kanji: "住みました",
-          hiragana: "住みました",
+          hiragana: "すみました",
           katakana: null,
           romaji: "sumimashita",
         },
         negative: {
           kanji: "住みませんでした",
-          hiragana: "住みませんでした",
+          hiragana: "すみませんでした",
           katakana: null,
           romaji: "sumimasendeshita",
         },
@@ -5000,13 +5000,13 @@ export const verbs: Verb[] = [
       past: {
         positive: {
           kanji: "住んだ",
-          hiragana: "住んだ",
+          hiragana: "すんだ",
           katakana: null,
           romaji: "sunda",
         },
         negative: {
           kanji: "住まなかった",
-          hiragana: "住まなかった",
+          hiragana: "すまなかった",
           katakana: null,
           romaji: "sumanakatta",
         },
@@ -5014,13 +5014,13 @@ export const verbs: Verb[] = [
       teForm: {
         positive: {
           kanji: "住んで",
-          hiragana: "住んで",
+          hiragana: "すんで",
           katakana: null,
           romaji: "sunde",
         },
         negative: {
           kanji: "住まなくて",
-          hiragana: "住まなくて",
+          hiragana: "すまなくて",
           katakana: null,
           romaji: "sumanakute",
         },
@@ -5028,13 +5028,13 @@ export const verbs: Verb[] = [
       potential: {
         positive: {
           kanji: "住める",
-          hiragana: "住める",
+          hiragana: "すめる",
           katakana: null,
           romaji: "sumeru",
         },
         negative: {
           kanji: "住めない",
-          hiragana: "住めない",
+          hiragana: "すめない",
           katakana: null,
           romaji: "sumenai",
         },
@@ -5048,13 +5048,13 @@ export const verbs: Verb[] = [
       nonPast: {
         positive: {
           kanji: "吸う",
-          hiragana: "吸う",
+          hiragana: "すう",
           katakana: null,
           romaji: "suu",
         },
         negative: {
           kanji: "吸わない",
-          hiragana: "吸わない",
+          hiragana: "すわない",
           katakana: null,
           romaji: "suwanai",
         },
@@ -5062,13 +5062,13 @@ export const verbs: Verb[] = [
       nonPastPolite: {
         positive: {
           kanji: "吸います",
-          hiragana: "吸います",
+          hiragana: "すいます",
           katakana: null,
           romaji: "suimasu",
         },
         negative: {
           kanji: "吸いません",
-          hiragana: "吸いません",
+          hiragana: "すいません",
           katakana: null,
           romaji: "suimasen",
         },
@@ -5076,13 +5076,13 @@ export const verbs: Verb[] = [
       pastPolite: {
         positive: {
           kanji: "吸いました",
-          hiragana: "吸いました",
+          hiragana: "すいました",
           katakana: null,
           romaji: "suimashita",
         },
         negative: {
           kanji: "吸いませんでした",
-          hiragana: "吸いませんでした",
+          hiragana: "すいませんでした",
           katakana: null,
           romaji: "suimasendeshita",
         },
@@ -5090,13 +5090,13 @@ export const verbs: Verb[] = [
       past: {
         positive: {
           kanji: "吸った",
-          hiragana: "吸った",
+          hiragana: "すった",
           katakana: null,
           romaji: "sutta",
         },
         negative: {
           kanji: "吸わなかった",
-          hiragana: "吸わなかった",
+          hiragana: "すわなかった",
           katakana: null,
           romaji: "suwanakatta",
         },
@@ -5104,13 +5104,13 @@ export const verbs: Verb[] = [
       teForm: {
         positive: {
           kanji: "吸って",
-          hiragana: "吸って",
+          hiragana: "すって",
           katakana: null,
           romaji: "sutte",
         },
         negative: {
           kanji: "吸わなくて",
-          hiragana: "吸わなくて",
+          hiragana: "すわなくて",
           katakana: null,
           romaji: "suwanakute",
         },
@@ -5118,13 +5118,13 @@ export const verbs: Verb[] = [
       potential: {
         positive: {
           kanji: "吸える",
-          hiragana: "吸える",
+          hiragana: "すえる",
           katakana: null,
           romaji: "sueru",
         },
         negative: {
           kanji: "吸えない",
-          hiragana: "吸えない",
+          hiragana: "すえない",
           katakana: null,
           romaji: "suenai",
         },
@@ -6128,13 +6128,13 @@ export const verbs: Verb[] = [
       nonPast: {
         positive: {
           kanji: "売る",
-          hiragana: "売る",
+          hiragana: "うる",
           katakana: null,
           romaji: "uru",
         },
         negative: {
           kanji: "売らない",
-          hiragana: "売らない",
+          hiragana: "うらない",
           katakana: null,
           romaji: "uranai",
         },
@@ -6142,13 +6142,13 @@ export const verbs: Verb[] = [
       nonPastPolite: {
         positive: {
           kanji: "売ります",
-          hiragana: "売ります",
+          hiragana: "うります",
           katakana: null,
           romaji: "urimasu",
         },
         negative: {
           kanji: "売りません",
-          hiragana: "売りません",
+          hiragana: "うりません",
           katakana: null,
           romaji: "urimasen",
         },
@@ -6156,13 +6156,13 @@ export const verbs: Verb[] = [
       pastPolite: {
         positive: {
           kanji: "売りました",
-          hiragana: "売りました",
+          hiragana: "うりました",
           katakana: null,
           romaji: "urimashita",
         },
         negative: {
           kanji: "売りませんでした",
-          hiragana: "売りませんでした",
+          hiragana: "うりませんでした",
           katakana: null,
           romaji: "urimasendeshita",
         },
@@ -6170,13 +6170,13 @@ export const verbs: Verb[] = [
       past: {
         positive: {
           kanji: "売った",
-          hiragana: "売った",
+          hiragana: "うった",
           katakana: null,
           romaji: "utta",
         },
         negative: {
           kanji: "売らなかった",
-          hiragana: "売らなかった",
+          hiragana: "うらなかった",
           katakana: null,
           romaji: "uranakatta",
         },
@@ -6184,13 +6184,13 @@ export const verbs: Verb[] = [
       teForm: {
         positive: {
           kanji: "売って",
-          hiragana: "売って",
+          hiragana: "うって",
           katakana: null,
           romaji: "utte",
         },
         negative: {
           kanji: "売らなくて",
-          hiragana: "売らなくて",
+          hiragana: "うらなくて",
           katakana: null,
           romaji: "uranakute",
         },
@@ -6198,13 +6198,13 @@ export const verbs: Verb[] = [
       potential: {
         positive: {
           kanji: "売れる",
-          hiragana: "売れる",
+          hiragana: "うれる",
           katakana: null,
           romaji: "ureru",
         },
         negative: {
           kanji: "売れない",
-          hiragana: "売れない",
+          hiragana: "うれない",
           katakana: null,
           romaji: "urenai",
         },

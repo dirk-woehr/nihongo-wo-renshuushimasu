@@ -82,10 +82,12 @@ const currentNonPastPositive = computed(() => {
   <section :class="styles.container" v-if="currentQueueItem !== null">
     <p :class="styles.mondai">
       <Furigana
+        v-if="baseWord?.kanji !== null"
         :key="baseWord?.romaji ?? '_none_'"
         :kanji="baseWord?.kanji ?? baseWord?.hiragana ?? baseWord?.romaji ?? ''"
         :hiragana="baseWord?.hiragana ?? baseWord?.romaji ?? ''"
       ></Furigana>
+      <span v-else>{{ baseWord?.hiragana }}</span>
       <span :class="styles.arrow">⇒</span>
       {{ translatedVerbForms.target }}
     </p>
