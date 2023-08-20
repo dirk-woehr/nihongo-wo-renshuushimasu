@@ -4,6 +4,16 @@
   margin: 0px;
 }
 
+.hint > a {
+  &:hover {
+    font-weight: bold;
+  }
+  color: var(--color-text-link);
+  padding: 5px;
+  display: inline-block;
+  text-decoration: none;
+}
+
 @media (min-width: 800px) {
   .hint {
     display: flex;

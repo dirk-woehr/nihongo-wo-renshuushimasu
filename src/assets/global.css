@@ -6,6 +6,7 @@
   --color-text-error-dark: #aa000090;
   --color-text-success: #00aa00;
   --color-text-success-dark: #00aa0090;
+  --color-text-link: rgb(255, 137, 40);
   --color-main-button: rgb(18, 70, 167);
   --color-input-background: rgba(182, 69, 25, 0.342);
   --color-button-border: #ff5b20;
@@ -13,6 +14,7 @@
   --font-size-input: 24px;
   --padding: 20px;
   --padding-small: 10px;
+  --furigana-margin-bottom: 5px;
   --height-fullscreen: 100svh;
   --width-fullscreen: 100svw;
   --height-input: 40px;

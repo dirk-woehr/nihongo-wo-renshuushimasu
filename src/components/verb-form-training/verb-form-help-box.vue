@@ -10,12 +10,6 @@ defineProps<{
 </script>
 
 <template>
-  <p
-    :class="styles.hint"
-    v-if="baseWord.hiragana !== null && baseWord.hiragana.length > 0"
-  >
-    {{ baseWord.hiragana }}
-  </p>
   <p :class="styles.hint" v-if="baseWord.romaji.length > 0">
     {{ baseWord.romaji }}
   </p>

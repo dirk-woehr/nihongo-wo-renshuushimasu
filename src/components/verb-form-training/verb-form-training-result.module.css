@@ -38,7 +38,8 @@
     "sourceHiragana targetHiragana"
     "sourceRomaji targetRomaji"
     "sourceKatakana targetKatakana"
-    "answer answer";
+    "answer answer"
+    "jisho jisho";
 }
 
 @media (min-width: 800px) {
@@ -47,7 +48,8 @@
     grid-template-areas:
       "round round round round round round"
       "source sourceKanji sourceHiragana sourceRomaji sourceKatakana answer"
-      "target targetKanji targetHiragana targetRomaji targetKatakana answer";
+      "target targetKanji targetHiragana targetRomaji targetKatakana answer"
+      "jisho jisho jisho jisho jisho jisho";
   }
 }
 
@@ -90,4 +92,17 @@
 }
 .targetKatakana {
   grid-area: targetKatakana;
+}
+.jisho {
+  grid-area: jisho;
+  text-align: center;
+}
+.jisho > a {
+  &:hover {
+    font-weight: bold;
+  }
+  color: var(--color-text-link);
+  padding: 5px;
+  display: inline-block;
+  text-decoration: none;
 }

@@ -100,7 +100,7 @@ const currentNonPastPositive = computed(() => {
       v-if="baseWord !== null && showHelp"
       :baseWord="baseWord"
       :group="group"
-      :non-past-positive="currentNonPastPositive"
+      :nonPastPositive="currentNonPastPositive"
     />
     <p>{{ gameQueue.length - 1 }} remaining</p>
     <div :class="[styles.desktop]">
@@ -149,6 +149,7 @@ const currentNonPastPositive = computed(() => {
       :round="index + 1"
       :verbForm="result.targetForm"
       :affirmation="result.affirmation"
+      :nonPastPositive="verbs[result.verbIndex].forms.nonPast.positive.romaji"
     >
       {{ JSON.stringify(result, null, 2) }}
     </TrainingResult>

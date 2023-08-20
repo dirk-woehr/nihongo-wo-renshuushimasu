@@ -6732,7 +6732,7 @@ export const verbs: Verb[] = [
           kanji: "休まなくて",
           hiragana: "やすまなくて",
           katakana: null,
-          romaji: "yasumanakatta",
+          romaji: "yasumanakute",
         },
       },
       potential: {

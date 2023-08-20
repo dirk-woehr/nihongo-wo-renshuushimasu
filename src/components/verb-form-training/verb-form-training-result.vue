@@ -9,6 +9,7 @@ const props = defineProps<{
   round: number;
   verbForm: VerbFormKeys;
   affirmation: boolean;
+  nonPastPositive: string;
 }>();
 
 const { affirmation } = props.result;
@@ -116,6 +117,11 @@ const teExtension = computed(() => {
       ]"
     >
       {{ result.answer }}
+    </div>
+    <div :class="styles.jisho">
+      <a :href="'https://jisho.org/search/' + nonPastPositive" target="_blank"
+        >View in Jisho.org</a
+      >
     </div>
   </div>
 </template>
