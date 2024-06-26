@@ -4,5 +4,6 @@ import vue from "@vitejs/plugin-vue";
 // https://vitejs.dev/config/
 export default defineConfig({
   base: "/nihongo-wo-renshuushimasu/",
+  appType: "mpa", // disable history fallback
   plugins: [vue()],
 });

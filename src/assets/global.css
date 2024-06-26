@@ -31,6 +31,10 @@ body {
   margin: 0px;
 }
 
+body div.Vue-Toastification__container {
+  min-height: auto;
+}
+
 @font-face {
   font-family: "Satoshi-Variable";
   src: url("/fonts/satoshi/Satoshi-Variable.woff2") format("woff2"),

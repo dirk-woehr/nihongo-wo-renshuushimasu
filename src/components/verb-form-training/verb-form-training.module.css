@@ -76,6 +76,12 @@
   cursor: pointer;
 }
 
+.parentGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  width: 100%;
+}
+
 @media (min-width: 800px) {
   .desktop {
     display: flex;
@@ -84,5 +90,9 @@
   }
   .mobile {
     display: none;
+  }
+
+  .parentGrid {
+    grid-template-columns: repeat(6, auto);
   }
 }

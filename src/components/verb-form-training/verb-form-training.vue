@@ -142,17 +142,19 @@ const currentNonPastPositive = computed(() => {
   </section>
   <section :class="styles.resultsContainer" v-if="currentQueueItem === null">
     <ResultSummary :results="results" />
-    <TrainingResult
-      v-for="(result, index) in results"
-      :key="index"
-      :result="result"
-      :round="index + 1"
-      :verbForm="result.targetForm"
-      :affirmation="result.affirmation"
-      :nonPastPositive="verbs[result.verbIndex].forms.nonPast.positive.romaji"
-    >
-      {{ JSON.stringify(result, null, 2) }}
-    </TrainingResult>
+    <div :class="[styles.parentGrid]">
+      <TrainingResult
+        v-for="(result, index) in results"
+        :key="index"
+        :result="result"
+        :round="index + 1"
+        :verbForm="result.targetForm"
+        :affirmation="result.affirmation"
+        :nonPastPositive="verbs[result.verbIndex].forms.nonPast.positive.romaji"
+      >
+        {{ JSON.stringify(result, null, 2) }}
+      </TrainingResult>
+    </div>
     <MainButton
       text="Return to Selection"
       @buttonClicked="emit('trainingFinished')"
